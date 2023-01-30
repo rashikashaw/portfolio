@@ -9,7 +9,7 @@
     "lint": "TIMING=1 eslint \"**/*.ts*\"",
     "preview": "vite preview",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",

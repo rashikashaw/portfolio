@@ -18,7 +18,7 @@ module.exports = {
     }],
     'eol-last': ['error', 'always'],
     'func-call-spacing': ['error', 'never'],
-    indent: ['error', 'tab', {
+    indent: ['error', 2, {
       'ignoreComments': true
     }],
     'jsx-quotes': ['error', 'prefer-single'],
