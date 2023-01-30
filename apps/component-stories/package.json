@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "lint": "TIMING=1 eslint \"**/*.ts*\"",
     "preview": "vite preview",
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
+    "@portfolio/tsconfig": "*",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
     "@storybook/addon-interactions": "^6.5.15",
@@ -41,6 +43,7 @@
     "babel-loader": "^8.3.0",
     "typescript": "^4.9.3",
     "vite": "^4.0.0",
-    "@portfolio/tsconfig": "*"
+    "eslint": "^8.33.0",
+    "@portfolio/eslint-config-custom": "*"
   }
 }

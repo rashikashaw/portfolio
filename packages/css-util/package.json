@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "eslint": "^7.32.0",
-    "eslint-config-custom": "*",
+    "@portfolio/eslint-config-custom": "*",
     "@portfolio/tsconfig": "*",
     "typescript": "^4.5.2"
   }

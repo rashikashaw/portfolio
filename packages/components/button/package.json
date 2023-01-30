@@ -7,9 +7,12 @@
   "scripts": {
     "lint": "TIMING=1 eslint \"**/*.ts*\""
   },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
   "devDependencies": {
     "eslint": "^8.33.0",
-    "eslint-config-custom": "*",
+    "@portfolio/eslint-config-custom": "*",
     "react": "^18.2.0",
     "@portfolio/tsconfig": "*",
     "typescript": "^4.9.4"
