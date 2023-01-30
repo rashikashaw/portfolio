@@ -1,0 +1,19 @@
+{
+  "name": "@portfolio/button",
+  "version": "1.0.0",
+  "description": "Button component",
+  "main": "index.js",
+  "author": "Manav Jaiswal",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "TIMING=1 eslint \"**/*.ts*\""
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-custom": "*",
+    "react": "^18.2.0",
+    "@portfolio/tsconfig": "*",
+    "typescript": "^4.9.4"
+  }
+}
