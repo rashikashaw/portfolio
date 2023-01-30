@@ -1,11 +1,16 @@
 {
-  "name": "@portfolio/button",
+  "name": "@portfolio/dropdown",
   "version": "1.0.0",
   "main": "src/index.ts",
   "license": "MIT",
   "private": false,
   "scripts": {
     "lint": "TIMING=1 eslint \"**/*.ts*\""
+  },
+  "dependencies": {
+    "@portfolio/hooks": "*",
+    "@portfolio/css-util": "*",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "eslint": "^8.33.0",

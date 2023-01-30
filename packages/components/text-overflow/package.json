@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/button",
+  "name": "@portfolio/text-overflow",
   "version": "1.0.0",
   "main": "src/index.ts",
   "license": "MIT",
@@ -7,6 +7,12 @@
   "scripts": {
     "lint": "TIMING=1 eslint \"**/*.ts*\""
   },
+  "dependencies": {
+    "@portfolio/hooks": "*",
+    "@portfolio/css-util": "*",
+    "antd": "^5.1.6"
+  },
+
   "devDependencies": {
     "eslint": "^8.33.0",
     "eslint-config-custom": "*",

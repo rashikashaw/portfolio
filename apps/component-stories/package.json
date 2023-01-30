@@ -14,10 +14,17 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@portfolio/button": "*",
+    "@portfolio/tags": "*",
+    "@portfolio/tabs": "*",
+    "@portfolio/expandable-block": "*",
+    "@portfolio/input": "*",
+    "@portfolio/text-overflow": "*",
+    "@portfolio/dropdown": "*",
     "@portfolio/css-util": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1"
+    "react-icons": "^4.7.1",
+    "react-lorem-ipsum": "^1.4.10"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
