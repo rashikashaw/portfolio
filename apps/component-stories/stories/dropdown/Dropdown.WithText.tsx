@@ -15,6 +15,6 @@ export const WithText = () => {
 		alert(`${index} option was clicked`)
 	}
 	return (
-		<Dropdown userImage={userImage}userName={userName} options={options} onSelect={onSelect} />
+		<Dropdown userImage={userImage} userName={userName} options={options} onSelect={onSelect} />
 	);
 };

@@ -7,7 +7,6 @@ import { ColorPalette } from "@portfolio/css-util";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 1500px;
 `;
 
 const VarientWrapper = styled.div`

@@ -18,6 +18,7 @@ const StyledButton = styled(Button)`
   align-items: center;
   margin-right: 4px;
   margin-bottom: 10px;
+  background-color: white;
   &: hover {
     background-color: ${ColorPalette.purple.purple4};
   }

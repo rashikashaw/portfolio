@@ -1,6 +1,7 @@
 import LoremIpsum from 'react-lorem-ipsum';
 import React from 'react';
 import { Tabs } from '@portfolio/tabs';
+import { action } from '@storybook/addon-actions';
 
 const Body1 = () => (
 	<LoremIpsum p={2} />
@@ -11,21 +12,13 @@ const Body2 = () => (
 		<LoremIpsum p={1} />
 	</>
 );
-const tabData = [
-	{
-		label: 'Tab1',
-		body: <Body1 />,
-	},
-	{
-		label: 'Tab2',
-		body: <Body2 />
-	},
-];
+const options = ['Tab1', 'Tab2'];
 
 export const Default = () => {
 	return(
 		<Tabs
-			data={tabData}
+			options={options}
+			onTabClick={action('onTabClick')}
 		/>
 	);
 };
