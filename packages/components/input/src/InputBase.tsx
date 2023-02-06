@@ -4,7 +4,7 @@ import React from "react";
 
 
 export const Wrapper = styled.div`
-  height: 35px;
+  height: 80px;
   width: 300px;
   position:relative;
   display: flex;

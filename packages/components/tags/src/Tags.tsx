@@ -1,59 +1,49 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { Tag } from "./Tag";
-import { Button } from "@portfolio/button";
 import { useOutsideClick } from "@portfolio/hooks";
-import { ColorPalette } from "@portfolio/css-util";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
 `;
 
-const StyledButton = styled(Button)`
+const Newtag = styled.div`
   height: 35px;
   width: 100px;
-  position:relative;
   display: flex;
   align-items: center;
-  margin-right: 4px;
-  margin-bottom: 10px;
+  justify-content: center;
+  border: 1px solid rgb(0, 0, 0, 0.4);
+  border-radius: 8px;
   background-color: white;
-  &: hover {
-    background-color: ${ColorPalette.purple.purple4};
+  &:hover {
+    border-color: #1677FF;
+    color: #1677FF;
   }
 `;
 
 const InputWrapper = styled.div` 
   height: 35px;
   width: 100px;
-  position: absolute;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-  margin-right: 4px;
-`;
-
-const TagsWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
 `;
 
 const InputBox = styled.input`
-  height: calc(100% - 2.3px) !important;
-  width: calc(100% - 53px) !important;
-  border-color: ${ColorPalette.purple.purple4};
-  border-radius: 8px;
+  height: 100%;
+  width: 100%;
   transition-duration: 1s;
   padding-left: 10px;
-  padding-right: 40px;
+  padding-right: 10px;
+  border: 1px solid rgb(0, 0, 0, 0.4);
+  border-radius: 8px;
   &:hover {
-    border-color: ${ColorPalette.purple.purple1};
+    border-color: #1677FF;
   }
   &:focus {
     outline: none !important;
-    border-color: ${ColorPalette.purple.purple1};
-  }
+    border-color: #1677FF;
 `;
 
 export type TagsProps =  {
@@ -89,17 +79,17 @@ export const Tags = (props: TagsProps) => {
 
   return (
     <Wrapper>
-      <StyledButton label={'New Tag'} onClick={handleClick}/>
+        {tags && tags.map((tag,i) => (
+          <Tag key={i} tag={tag} onTagDelete={() => { onTagDelete(i); }} />
+        ))}
+      {!isShown &&
+      <Newtag onClick={handleClick}>New Tag</Newtag>
+      }   
       { isShown &&
         <InputWrapper ref={outsideClickRef}>
           <InputBox onKeyDown={onEnterKey} onChange={onChangeHandler} value={inputValue} autoFocus />
         </InputWrapper>
       } 
-      <TagsWrapper>
-        {tags && tags.map((tag,i) => (
-          <Tag key={i} tag={tag} onTagDelete={() => { onTagDelete(i); }} />
-        ))}
-      </TagsWrapper>
     </Wrapper>
   );
 };

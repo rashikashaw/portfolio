@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/tags",
+  "name": "@portfolio/profile-dropdown",
   "version": "1.0.0",
   "main": "src/index.ts",
   "license": "MIT",
@@ -8,15 +8,15 @@
     "lint": "TIMING=1 eslint \"**/*.ts*\""
   },
   "dependencies": {
-    "@portfolio/css-util": "*",
     "@portfolio/hooks": "*",
-    "styled-components": "^5.3.6"
+    "@portfolio/css-util": "*",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
-    "@portfolio/tsconfig": "*",
     "eslint": "^8.33.0",
     "eslint-config-custom": "*",
     "react": "^18.2.0",
+    "@portfolio/tsconfig": "*",
     "typescript": "^4.9.4"
   }
 }

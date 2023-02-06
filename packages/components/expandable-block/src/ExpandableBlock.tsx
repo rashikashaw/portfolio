@@ -25,7 +25,6 @@ const BodyWrapper = styled.div<{ isOpen: boolean }>`
   max-height: ${({ isOpen }) => isOpen ? '100px' : '0px'};
   border: ${({ isOpen }) => isOpen ? '1px' : '0px'} solid black;
   transition: max-height 200ms ease-in-out;
-  overflow: hidden;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -52,13 +51,10 @@ export const ExpandableBlock = (props: ExpandableBlockProps) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const onHeaderClick = () => {
-    setIsOpen(!isOpen);
+    const newIsopen = !isOpen;
+    setIsOpen(newIsopen);
+    onToggle && onToggle(newIsopen)
   };
-
-  useEffect(() => {
-    onToggle && onToggle(isOpen)
-  }, [isOpen]);
-
   useEffect(() => {
     if (close && isOpen) {
       setIsOpen(false);

@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
-import { AiOutlineCloseCircle } from "react-icons/ai";
-import { ColorPalette } from "@portfolio/css-util";
+import { GrFormClose } from "react-icons/gr";
 import { TextOverFlow } from "@portfolio/text-overflow";
 
 const TagWrapper = styled.div`
@@ -9,15 +8,23 @@ const TagWrapper = styled.div`
   width: 100px;
   display: flex;
   flex-direction: column;
-  border: 1px solid ${ColorPalette.purple.purple2};
+  border: 1px solid  rgb(0, 0, 0, 0.4);
   border-radius: 8px;
   justify-content: center;
   align-items: flex-start;
+  background-color: rgb(0, 0, 0, 0.04);
   position:relative;
   padding: 6px;
   margin-right: 4px;
   margin-left: 4px;
+  &:hover {
+    border-color: #1677FF;
+    color: #1677FF;
+  }
 `;
+
+  
+
 
 const StyledTextOverFlow = styled(TextOverFlow)`
   height: 0px;
@@ -50,9 +57,9 @@ export const Tag = (props: TagProp) => {
   return (
     <TagWrapper>
       <StyledTextOverFlow text={tag} length={7} />
-      <IconWrapper onClick={onTagDelete}>
-        <AiOutlineCloseCircle />
-      </IconWrapper>
+        <IconWrapper onClick={onTagDelete}>
+          <GrFormClose />
+        </IconWrapper>    
     </TagWrapper>
   );
 };

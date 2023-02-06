@@ -5,8 +5,11 @@ import { BiEnvelope, BiSearchAlt } from 'react-icons/bi';
 import { ColorPalette } from "@portfolio/css-util";
 
 const Wrapper = styled.div`
+  height: 150px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
 `;
 
 const VarientWrapper = styled.div`
@@ -17,7 +20,7 @@ const VarientWrapper = styled.div`
 `;
 
 const StyledInput = styled(Input)`
-  height: 35px;
+  height: 100px;
   width: 200px;
 `;
 

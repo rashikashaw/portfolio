@@ -1,104 +1,55 @@
-import React, { useState } from "react";
+import React, { PropsWithChildren, useState, ReactNode } from "react";
 import styled from "@emotion/styled";
-import { ColorPalette, font, sizes } from "@portfolio/css-util";
-import { Button } from "@portfolio/button";
 import { useOutsideClick } from "@portfolio/hooks";
-import { GoThreeBars } from "react-icons/go";
+
+type DropdownOption = string | ReactNode;
+export type DropdownProps = {
+  options: DropdownOption[] ;
+  onSelect: (optionIndex: number) => void;
+}
 
 const Wrapper = styled.div`
   position: relative;
   display: inline-block;
 `;
 
-const DropdownBox = styled.div`
-  height: 650px;
-  width: 400px;
-  border-radius: 17px;
-  display: block;
+const DropdownBox = styled.div<{ status: boolean; options: DropdownProps['options']; }>`
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  border: grey solid 1px;
   z-index: 1;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  overflow: hidden;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  height: ${({ status, options }) => status ? `${options.length * 32 + 10}px` : '0px'};
+  ${({ status }) => status ? '' : `
+    padding: 0px;
+    border: 0px;
+  `}
+  transition: all 0.2s 0s ease;
 `;
 
-const Header = styled.div`
-border-bottom: ${ColorPalette.black.black4} solid 1px;
-border-top-right-radius: 17px;
-border-top-left-radius: 17px;
-height: 30%;
-width: 100%;
-background: ${ColorPalette.purple.purple5};
-justify-content: center;
-align-items: center;
-display: flex;
-flex-direction: column;
-margin: auto;
+const OptionWrapper = styled.div<{ status: boolean }>`
+  min-width: 96px;
+  min-height: 32px;
+  overflow: hidden;
+  display: flex; 
+  flex-direction: row;
+  border-radius: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  transition: background 0.5s ease;
+  &:hover {
+    background: rgb(0, 0, 0, 0.05);
+  }
 `;
 
-const Body = styled.div`
-height: 50%;
-width: 100%;
-margin: auto;
-background: ${ColorPalette.purple.purple5};
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-`;
-
-const MenuOptions = styled.div`
-font-size: 20px;
-margin-bottom: 24px;
-height: 20%;
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-`;
-
-const UserImageWrapper = styled.div`
-margin: 10px 0px 10px;
-font-size: 80px;
-`;
-
-const UserNameWrapper = styled.div`
-font-size: 30px;
-`;
-
-export const ButtonWrapper = styled.div`
-height: 20%;
-width: 100%;
-border-bottom-right-radius: 17px;
-border-bottom-left-radius: 17px;
-margin: auto;
-background: ${ColorPalette.purple.purple5};
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-`;
-
-export const StyledButton = styled(Button)`
-width: 300px;
-height: ${sizes.buttonLarge.height}px;
-border: none;
-background: ${ColorPalette.purple.purple5};
-font-size: ${font.button.buttonLarge.fontSize}px;
-font-weight: ${font.button.buttonLarge.fontWeight};
-justify-content: center;
-align-items: center;
-`;
-
-
-export type DropdownProps = {
-  options: string[] | React.ReactNode[];
-  onSelect: (optionIndex: number) => void;
-  userName: string;
-  userImage: React.ReactNode;
-}
-
-export const Dropdown = (props: DropdownProps) => {
-  const { userImage, userName, options, onSelect } = props;
+export const Dropdown = (props: PropsWithChildren<DropdownProps>) => {
+  const { options, onSelect, children } = props;
   const [status, setStatus] = useState(false);
   const toggleDropdownStatus = () => setStatus(!status);
   const resetDropdownStatus = () => setStatus(false);
@@ -106,29 +57,20 @@ export const Dropdown = (props: DropdownProps) => {
  
   return (
     <Wrapper ref={outsideClickRef}>
-      <GoThreeBars onClick={toggleDropdownStatus} />
-      {status && ( 
-        <DropdownBox>
-          <Header>
-            <UserImageWrapper>
-              {userImage}
-            </UserImageWrapper>
-            <UserNameWrapper>
-              {userName}
-            </UserNameWrapper>
-          </Header>
-          <Body>
-            {options.map((option, i) => (
-              <MenuOptions onClick={ () => { onSelect(i); } }>
-                {option}
-              </MenuOptions>
-            ))}
-          </Body>
-          <ButtonWrapper>
-            <StyledButton label={'Log out'} onClick={() => {}} />
-          </ButtonWrapper>
-        </DropdownBox>
-      )}
+      <div onClick={toggleDropdownStatus}>
+        {children}
+      </div>
+      <DropdownBox status={status} options={options}>
+        {options.map((option, i) => (
+          <OptionWrapper status={status} key={i}>
+            {
+              typeof option !== 'string' ? option : (
+                <div>{option}</div>
+              )
+            }
+          </OptionWrapper>
+        ))}
+      </DropdownBox>
     </Wrapper>
   ); 
 };

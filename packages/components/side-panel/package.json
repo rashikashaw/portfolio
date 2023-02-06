@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/tags",
+  "name": "@portfolio/side-panel",
   "version": "1.0.0",
   "main": "src/index.ts",
   "license": "MIT",
@@ -8,9 +8,10 @@
     "lint": "TIMING=1 eslint \"**/*.ts*\""
   },
   "dependencies": {
+    "@emotion/styled": "^11.10.5",
     "@portfolio/css-util": "*",
     "@portfolio/hooks": "*",
-    "styled-components": "^5.3.6"
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@portfolio/tsconfig": "*",

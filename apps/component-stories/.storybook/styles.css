@@ -5,13 +5,13 @@ html, body {
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 #root {
   display: flex;
   height: 100%;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 32px;
 }

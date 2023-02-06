@@ -1,31 +1,20 @@
-import React from 'react';
-import { 
-  ColouredLargeButton, 
-  ColouredMediumButton, 
-  ColouredSmallButton, 
-  StrokeLargeButton, 
-  StrokeMediumButton, 
-  StrokeSmallButton,
-  ColouredLargeButtonWithIcon,
-  ColouredMediumButtonWithIcon,
-  ColouredSmallButtonWithIcon,
-  StrokeLargeButtonWithIcon,
-  StrokeMediumButtonWithIcon,
-  StrokeSmallButtonWithIcon,
-  SimpleLargeButton,
-  SimpleMediumButton,
-  SimpleSmallButton,
-  SimpleLargeButtonWithIcon,
-  SimpleMediumButtonWithIcon,
-  SimpleSmallButtonWithIcon,
-  IconLabel,
-} from './ButtonUtil';
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
+import { Button } from "@portfolio/button";
+import { useState } from "react";
+import { IoIosArrowForward } from 'react-icons/io';
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+
+export const IconLabel = () => (
+  <>
+    {'Submit'}
+    <IoIosArrowForward />
+  </>
+);
+
+const RegularButton = styled(Button)`
+  width: 120px;
 `;
+
 const RowWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -35,38 +24,19 @@ const RowWrapper = styled.div`
   justify-content: space-around;
 `;
 
-export const Default = () => (
-  <Wrapper>
+export const Default = () => {
+  const [isLoading, setisLoading] = useState(false);
+  const onLoadingButtonClick = () => {
+    setisLoading(true);
+  };
+  if (isLoading) {
+    setTimeout(() => { setisLoading(false); }, 2000);
+  }
+  return (
     <RowWrapper>
-      <ColouredLargeButton label={'Button'} onClick={() => {}} />
-      <ColouredMediumButton label={'Button'} onClick={() => {}} />
-      <ColouredSmallButton label={'Button'} onClick={() => {}} />
+      <Button label='Danger' variant="danger" onClick={() => {}} />
+      <Button label={<IconLabel/>} variant="primary" onClick={() => {}} />
+      <RegularButton label='Click me to load' variant="regular" isButtonLoading={isLoading} onClick={onLoadingButtonClick} />
     </RowWrapper>
-    <RowWrapper>
-      <ColouredLargeButtonWithIcon label={<IconLabel/>} onClick={() => {}} />
-      <ColouredMediumButtonWithIcon label={<IconLabel/>} onClick={() => {}} />
-      <ColouredSmallButtonWithIcon label={<IconLabel/>} onClick={() => {}} />
-    </RowWrapper>
-    <RowWrapper>
-      <StrokeLargeButton label={'Button'} onClick={() => {}} />
-      <StrokeMediumButton label={'Button'} onClick={() => {}} />
-      <StrokeSmallButton label={'Button'} onClick={() => {}} />
-    </RowWrapper>
-    <RowWrapper>
-      <StrokeLargeButtonWithIcon label={<IconLabel/>} onClick={() => {}}/>
-      <StrokeMediumButtonWithIcon label={<IconLabel/>} onClick={() => {}} />
-      <StrokeSmallButtonWithIcon label={<IconLabel/>} onClick={() => {}} />
-    </RowWrapper>
-    <RowWrapper>
-      <SimpleLargeButton label={'Button'} onClick={() => {}} />
-      <SimpleMediumButton label={'Button'} onClick={() => {}} />
-      <SimpleSmallButton label={'Button'} onClick={() => {}} />
-    </RowWrapper>
-    <RowWrapper>
-      <SimpleLargeButtonWithIcon label={<IconLabel/>} onClick={() => {}} />
-      <SimpleMediumButtonWithIcon label={<IconLabel/>} onClick={() => {}} />
-      <SimpleSmallButtonWithIcon label={<IconLabel/>} onClick={() => {}} />
-    </RowWrapper>
-
-  </Wrapper>
-);
+  );
+};
