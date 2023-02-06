@@ -1,4 +1,11 @@
-export const ColorPalette = {
+export const ColorPalette: {
+  black: {
+    [k: string]: string;
+  },
+  purple: {
+    [k: string]: string;
+  },
+} = {
   black: {
     black1: "#151515",
     black2: "#575757",
