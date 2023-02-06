@@ -4,6 +4,7 @@ This is a hub of my personal projects and packages.
 
 ## What's inside?
 Apps are located in `apps/` directory and packages are located in `packages/` directory.
+Click the below links to open the deployed apps.
 ### Apps and Packages
 
 - [`evo-gym`](https://portfolio-storybook.netlify.app): A simple fitness center website developed using React and Tailwind and deployed using Netlify.
