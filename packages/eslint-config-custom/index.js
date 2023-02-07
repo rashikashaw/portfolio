@@ -1,9 +1,9 @@
 module.exports = {
   env: {
-    'es2021': true
+    'es2021': true,
   },
   extends: [ 'turbo', 'prettier', 'plugin:react/recommended'],
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'turbo'],
   parser: '@typescript-eslint/parser',
   rules: {
     'react/jsx-key': 'off',
@@ -18,8 +18,9 @@ module.exports = {
     }],
     'eol-last': ['error', 'always'],
     'func-call-spacing': ['error', 'never'],
+    // eslint-disable-next-line no-magic-numbers
     indent: ['error', 2, {
-      'ignoreComments': true
+      'ignoreComments': true,
     }],
     'jsx-quotes': ['error', 'prefer-single'],
     'key-spacing': ['error'],
