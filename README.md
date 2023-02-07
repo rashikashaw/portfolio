@@ -10,8 +10,9 @@ Click the below links to open the deployed apps.
 - [`evo-gym`](https://portfolio-storybook.netlify.app): A simple fitness center website developed using React and Tailwind and deployed using Netlify.
 - `self-made`: Under contruction e-commerce web sites for creative home crafts using React and Redux with APIs using Firebase.
 - [`component-stories`](https://portfolio-storybook.netlify.app): Storybook for shared components, hooks, design system and helper utilites. Hosted using Netlify.
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- Utility packages:
+-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
