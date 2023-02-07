@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "TIMING=1 eslint \"**/*.ts*\"",
+    "format": "prettier --write src/*"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.14",
