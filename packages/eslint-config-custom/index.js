@@ -22,7 +22,7 @@ module.exports = {
     indent: ['error', 2, {
       'ignoreComments': true,
     }],
-    'jsx-quotes': ['error', 'prefer-single'],
+    'jsx-quotes': ['error', 'prefer-double'],
     'key-spacing': ['error'],
     'max-len': ['error', {
       code: 80,
