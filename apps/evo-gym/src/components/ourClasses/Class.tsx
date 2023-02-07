@@ -1,9 +1,8 @@
-
 type ClassProps = {
   name: string;
   description?: string;
   image: string;
-}
+};
 export const Class = (props: ClassProps) => {
   const { name, description, image } = props;
   const overlayStyles = `p-5 absolute z-30 flex

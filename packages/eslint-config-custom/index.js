@@ -25,7 +25,11 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-double'],
     'key-spacing': ['error'],
     'max-len': ['error', {
-      code: 80,
+      code: 100,
+      ignoreComments: true,
+      ignoreUrls: true,
+      ignoreString: true,
+      ignoreRegExpLiterals: true,
     }],
     'no-extra-parens': ['error', 'all'],
     'no-trailing-spaces': ['error'],
@@ -46,5 +50,7 @@ module.exports = {
     'prefer-const': ['error'],
     'yoda': ['error', 'never'],
     'space-infix-ops': ['error'],
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
 };

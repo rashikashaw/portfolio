@@ -1,21 +1,22 @@
-import { SelectedPage } from "@/shared/types";
-import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { SelectedPage } from '@/shared/types';
+import { motion } from 'framer-motion';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import React from 'react';
 
 type BenefitProps = {
   icon: JSX.Element;
   description: string;
   title: string;
-  setSelectedPage: (value: SelectedPage) => void
-}
+  setSelectedPage: (value: SelectedPage) => void;
+};
 
 export const Benefit = (props: BenefitProps) => {
   const { icon, description, title, setSelectedPage } = props;
   return (
     <motion.div
-      variants= {{
+      variants={{
         hidden: { opacity: 0, scale: 0.9 },
-        visible: { opacity: 1, scale: 1  },
+        visible: { opacity: 1, scale: 1 },
       }}
       className="mt-5 rounded-md border-2 border-gray-100 px-5 py-16 text-center"
     >

@@ -1,16 +1,20 @@
-import { useForm } from "react-hook-form";
-import { SelectedPage } from "@/shared/types";
-import { motion } from "framer-motion";
-import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
-import { HText } from "@/shared/HText";
+import { useForm } from 'react-hook-form';
+import { SelectedPage } from '@/shared/types';
+import { motion } from 'framer-motion';
+import ContactUsPageGraphic from '@/assets/ContactUsPageGraphic.png';
+import { HText } from '@/shared/HText';
 
 type ContactUsProps = {
-  setSelectedPage: (value: SelectedPage) => void
-}
+  setSelectedPage: (value: SelectedPage) => void;
+};
 export const ContactUs = (props: ContactUsProps) => {
   const { setSelectedPage } = props;
-  const { register, trigger, formState: { errors } } = useForm();
-  const onSubmit =  async (e: any) => {
+  const {
+    register,
+    trigger,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = async (e: any) => {
     const isValid = await trigger();
     if (!isValid) {
       e.preventDefault();
@@ -26,7 +30,7 @@ export const ContactUs = (props: ContactUsProps) => {
       >
         {/* HEADER */}
         <motion.div
-          className="md:w-3/5 mr-7"
+          className="mr-7 md:w-3/5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -69,16 +73,16 @@ export const ContactUs = (props: ContactUsProps) => {
                 className={inputStyles}
                 type="text"
                 placeholder="NAME"
-                {...register("name", {
+                {...register('name', {
                   required: true,
                   maxLength: 100,
                 })}
               />
               {errors.name && (
                 <p className="mt-1 text-primary-500">
-                  {errors.name.type === "required" && "This field is required."}
-                  {errors.name.type === "maxLength" &&
-                    "Max length is 100 char."}
+                  {errors.name.type === 'required' && 'This field is required.'}
+                  {errors.name.type === 'maxLength' &&
+                    'Max length is 100 char.'}
                 </p>
               )}
 
@@ -86,16 +90,16 @@ export const ContactUs = (props: ContactUsProps) => {
                 className={inputStyles}
                 type="text"
                 placeholder="EMAIL"
-                {...register("email", {
+                {...register('email', {
                   required: true,
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                 })}
               />
               {errors.email && (
                 <p className="mt-1 text-primary-500">
-                  {errors.email.type === "required" &&
-                    "This field is required."}
-                  {errors.email.type === "pattern" && "Invalid email address."}
+                  {errors.email.type === 'required' &&
+                    'This field is required.'}
+                  {errors.email.type === 'pattern' && 'Invalid email address.'}
                 </p>
               )}
 
@@ -104,17 +108,17 @@ export const ContactUs = (props: ContactUsProps) => {
                 placeholder="MESSAGE"
                 rows={4}
                 cols={50}
-                {...register("message", {
+                {...register('message', {
                   required: true,
                   maxLength: 2000,
                 })}
               />
               {errors.message && (
                 <p className="mt-1 text-primary-500">
-                  {errors.message.type === "required" &&
-                    "This field is required."}
-                  {errors.message.type === "maxLength" &&
-                    "Max length is 2000 char."}
+                  {errors.message.type === 'required' &&
+                    'This field is required.'}
+                  {errors.message.type === 'maxLength' &&
+                    'Max length is 2000 char.'}
                 </p>
               )}
 

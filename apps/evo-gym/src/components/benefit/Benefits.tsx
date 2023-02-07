@@ -1,33 +1,33 @@
-import { ActionButton } from "@/shared/ActionButton";
-import { HText } from "@/shared/HText";
-import { BenefitType, SelectedPage } from "@/shared/types";
+import { ActionButton } from '@/shared/ActionButton';
+import { HText } from '@/shared/HText';
+import { BenefitType, SelectedPage } from '@/shared/types';
 import {
   HomeModernIcon,
   UserGroupIcon,
   AcademicCapIcon,
-} from "@heroicons/react/24/solid";
-import { motion } from "framer-motion";
-import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
-import { Benefit } from "./Benefit";
+} from '@heroicons/react/24/solid';
+import { motion } from 'framer-motion';
+import BenefitsPageGraphic from '@/assets/BenefitsPageGraphic.png';
+import { Benefit } from './Benefit';
 
 const benefits: Array<BenefitType> = [
   {
     icon: <HomeModernIcon className="h-6 w-6" />,
-    title: "State of the Art Facilities",
+    title: 'State of the Art Facilities',
     description:
-      "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
+      'Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.',
   },
   {
     icon: <UserGroupIcon className="h-6 w-6" />,
-    title: "100's of Diverse Classes",
+    title: '100\'s of Diverse Classes',
     description:
-      "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
+      'Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.',
   },
   {
     icon: <AcademicCapIcon className="h-6 w-6" />,
-    title: "Expert and Pro Trainers",
+    title: 'Expert and Pro Trainers',
     description:
-      "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
+      'Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.',
   },
 ];
 
@@ -39,8 +39,8 @@ const container = {
 };
 
 type BenefitsProp = {
-  setSelectedPage: (value: SelectedPage) => void
-}
+  setSelectedPage: (value: SelectedPage) => void;
+};
 
 export const Benefits = (props: BenefitsProp) => {
   const { setSelectedPage } = props;
@@ -77,15 +77,15 @@ export const Benefits = (props: BenefitsProp) => {
           viewport={{ once: true, amount: 0.5 }}
           variants={container}
         >
-          {benefits.map((benefit: BenefitType) => (
+          {benefits.map((benefit: BenefitType) =>
             <Benefit
               key={benefit.title}
               icon={benefit.icon}
               title={benefit.title}
               description={benefit.description}
               setSelectedPage={setSelectedPage}
-            />
-          ))}
+            />,
+          )}
         </motion.div>
 
         {/* GRAPHICS AND DESCRIPTION */}
@@ -113,7 +113,7 @@ export const Benefits = (props: BenefitsProp) => {
                   }}
                 >
                   <HText>
-                    MILLIONS OF HAPPY MEMBERS GETTING{" "}
+                    MILLIONS OF HAPPY MEMBERS GETTING{' '}
                     <span className="text-primary-500">FIT</span>
                   </HText>
                 </motion.div>
