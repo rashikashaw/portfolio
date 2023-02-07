@@ -8113,6 +8113,11 @@ form-data@^4.0.0:
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
+"format@prettier --write src/*":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/format/-/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
+  integrity sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==
+
 formidable@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/formidable/-/formidable-2.1.2.tgz#fa973a2bec150e4ce7cac15589d7a25fc30ebd89"
@@ -10334,6 +10339,11 @@ lint-staged@^13.0.3:
     pidtree "^0.6.0"
     string-argv "^0.3.1"
     yaml "^2.1.3"
+
+"lint@TIMING=1 eslint \"**/*.ts*\"":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/lint/-/lint-1.1.2.tgz#35ed064f322547c331358d899868664968ba371f"
+  integrity sha512-kOzKdN0iSdkx57102MxZd64yn32rHaB6xqBMN3hyCRiBV2xiurM75XWvTHWNK/SJBCddHPhjDLV+kNr3Uf1MGg==
 
 listr2@^5.0.5:
   version "5.0.7"
