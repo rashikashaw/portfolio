@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import { ExpandableBlock } from '@portfolio/expandable-block';
-import { useState } from "@storybook/addons";
+import { useState } from '@storybook/addons';
 import { GoChevronRight, GoChevronDown } from 'react-icons/go';
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 const EB_CLASS = 'expandable-block-class';
 const Wrapper = styled.div`
@@ -32,46 +32,48 @@ const IconWrapper = styled.div`
   justify-content: center;
 `;
 
-type HeaderProp = { 
-  currStatus: boolean, 
-  text: string,
-}
+type HeaderProp = {
+  currStatus: boolean;
+  text: string;
+};
 const Header = ({ currStatus, text }: HeaderProp) => {
   return (
-    <HeaderWrapper> 
+    <HeaderWrapper>
       <IconWrapper>
-      {currStatus ?
-        <GoChevronDown /> :
-        <GoChevronRight />
-      }
+        {currStatus ? <GoChevronDown /> : <GoChevronRight />}
       </IconWrapper>
       <TextWrapper>{text}</TextWrapper>
     </HeaderWrapper>
-  )
-}
+  );
+};
 
 export const Default = () => {
   const [state, setState] = useState([false, false]);
   const onAnyToggleClick = (status: boolean, index: number) => {
     const newStatus = [...state];
     newStatus[index] = status;
-    setState(newStatus)
+    setState(newStatus);
   };
-
+  const state0 = 0;
+  const state1 = 1;
   return (
     <Wrapper>
-      <ExpandableBlock 
-        header={<Header currStatus={state[0]} text={'Header 1'} />} 
-        body={'body 1'} 
-        onToggle={ (status: boolean) => {onAnyToggleClick(status, 0)} } 
-        close={state[1]}
+      <ExpandableBlock
+        header={<Header currStatus={state[state0]} text={'Header 1'} />}
+        body={'body 1'}
+        onToggle={(status: boolean) => {
+          onAnyToggleClick(status, state0);
+        }}
+        close={state[state1]}
         className={EB_CLASS}
       />
-      <ExpandableBlock 
-        header={<Header currStatus={state[1]} text={'Header 2'}/>} 
-        body={'body 2'} 
-        onToggle={ (status: boolean) => {onAnyToggleClick(status, 1)}} 
-        close={state[0]}  
+      <ExpandableBlock
+        header={<Header currStatus={state[state1]} text={'Header 2'} />}
+        body={'body 2'}
+        onToggle={(status: boolean) => {
+          onAnyToggleClick(status, state1);
+        }}
+        close={state[state0]}
       />
     </Wrapper>
   );

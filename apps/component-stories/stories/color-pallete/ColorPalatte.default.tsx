@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { ColorPalette } from "@portfolio/css-util";
+import React from 'react';
+import styled from '@emotion/styled';
+import { ColorPalette } from '@portfolio/css-util';
 
 const Wrapper = styled.div`
   align-items: flex-start;
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 const Color = styled.div`
   width: 72px;
   height: 32px;
-  background: ${p => p.color};
+  background: ${(p) => p.color};
   margin-left: 32px;
 `;
 const ColorItem = styled.div`
@@ -35,25 +35,21 @@ export const ColorPalatte = () => {
     <Wrapper>
       <ColorWrapper>
         <ColorTitle>Purple</ColorTitle>
-        {
-          Object.keys(ColorPalette.purple).map(colorName => (
-            <ColorItem>
-              <div>{`${colorName}: `}</div>
-              <Color color={ColorPalette.purple[colorName]} />
-            </ColorItem>
-          ))
-        }
+        {Object.keys(ColorPalette.purple).map((colorName) => (
+          <ColorItem>
+            <div>{`${colorName}: `}</div>
+            <Color color={ColorPalette.purple[colorName]} />
+          </ColorItem>
+        ))}
       </ColorWrapper>
       <ColorWrapper>
         <ColorTitle>Black</ColorTitle>
-        {
-          Object.keys(ColorPalette.black).map(colorName => (
-            <ColorItem>
-              <div>{`${colorName}: `}</div>
-              <Color color={ColorPalette.black[colorName]} />
-            </ColorItem>
-          ))
-        }
+        {Object.keys(ColorPalette.black).map((colorName) => (
+          <ColorItem>
+            <div>{`${colorName}: `}</div>
+            <Color color={ColorPalette.black[colorName]} />
+          </ColorItem>
+        ))}
       </ColorWrapper>
     </Wrapper>
   );

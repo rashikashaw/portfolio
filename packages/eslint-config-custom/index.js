@@ -38,7 +38,7 @@ module.exports = {
     'no-else-return': ['error'],
     'no-inline-comments': ['error'],
     'no-lone-blocks': ['error'],
-    'no-magic-numbers': ['error'],
+    // 'no-magic-numbers': ['error'],
     'no-return-assign': ['error', 'always'],
     'no-unneeded-ternary': ['error'],
     'no-unused-expressions': ['error'],

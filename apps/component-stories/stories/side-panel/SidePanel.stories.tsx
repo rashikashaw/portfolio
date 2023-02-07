@@ -1,8 +1,8 @@
 import { Meta } from '@storybook/react';
 import { SidePanel } from '@portfolio/side-panel';
 const meta: Meta = {
-	title: 'SidePanel',
-	component: SidePanel,
+  title: 'SidePanel',
+  component: SidePanel,
 };
 
 export default meta;

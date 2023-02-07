@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
-import { Button } from "@portfolio/button";
-import { SidePanel, useSidePanel } from "@portfolio/side-panel"
-import { useState } from "react";
-import LoremIpsum from "react-lorem-ipsum";
+import styled from '@emotion/styled';
+import { Button } from '@portfolio/button';
+import { SidePanel, useSidePanel } from '@portfolio/side-panel';
+import React, { useState } from 'react';
+import LoremIpsum from 'react-lorem-ipsum';
 
 const Wrapper = styled.div`
   display: flex;
@@ -17,9 +17,7 @@ const HeaderWrapper = styled.div`
 const HeaderText = styled.div`
   margin-left: 8px;
 `;
-type HeaderType = {
-
-}
+type HeaderType = {};
 const Header = () => {
   return (
     <HeaderWrapper>
@@ -29,7 +27,7 @@ const Header = () => {
 };
 
 const StyledButton = styled(Button)`
-  background: #DEDAF9;
+  background: #dedaf9;
   border: 1px solid;
   font-size: 16px;
   cursor: pointer;
@@ -40,13 +38,14 @@ export const Default = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   return (
     <Wrapper>
-      <StyledButton  label='click' onClick={() => setDrawerOpen(!drawerOpen)}/>
-      { drawerOpen &&
-        <SidePanel 
-          isOpen={drawerOpen} 
-          header={<Header />} 
-          body={<LoremIpsum />} 
-          close={() => setDrawerOpen(false)} />
+      <StyledButton label="click" onClick={() => setDrawerOpen(!drawerOpen)} />
+      {drawerOpen &&
+        <SidePanel
+          isOpen={drawerOpen}
+          header={<Header />}
+          body={<LoremIpsum />}
+          close={() => setDrawerOpen(false)}
+        />
       }
     </Wrapper>
   );

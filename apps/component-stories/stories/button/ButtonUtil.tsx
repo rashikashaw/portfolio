@@ -16,14 +16,14 @@ export const ThreeDashMenuIcon = styled(GoThreeBars)`
   cursor: pointer;
 `;
 
-
-export const IconLabel = () => (
-  <>
-    {'Button'}
-    <ButtonArrowIcon />
-  </>
-);
-
+export const IconLabel = () => {
+  return (
+    <>
+      {'Button'}
+      <ButtonArrowIcon />
+    </>
+  );
+};
 
 export const ColouredLargeButton = styled(Button)`
   width: ${sizes.buttonLarge.width}px;
@@ -68,7 +68,6 @@ export const ColouredSmallButtonWithIcon = styled(Button)`
   background: ${ColorPalette.purple.purple1};
   font-size: ${font.button.buttonSmall.fontSize}px;
   font-weight: ${font.button.buttonSmall.fontWeight};
-
 `;
 
 export const StrokeLargeButton = styled(Button)`
@@ -81,7 +80,7 @@ export const StrokeLargeButton = styled(Button)`
 
 export const StrokeMediumButton = styled(Button)`
   width: ${sizes.buttonMedium.width}px;
-  height: ${sizes.buttonMedium.height}px; 
+  height: ${sizes.buttonMedium.height}px;
   background: ${ColorPalette.purple.purple5};
   font-size: ${font.button.buttonMedium.fontSize}px;
   font-weight: ${font.button.buttonMedium.fontWeight};
@@ -89,7 +88,7 @@ export const StrokeMediumButton = styled(Button)`
 
 export const StrokeSmallButton = styled(Button)`
   width: ${sizes.buttonSmall.width}px;
-  height: ${sizes.buttonSmall.height}px; 
+  height: ${sizes.buttonSmall.height}px;
   background: ${ColorPalette.purple.purple5};
   font-size: ${font.button.buttonSmall.fontSize}px;
   font-weight: ${font.button.buttonSmall.fontWeight};
@@ -104,7 +103,6 @@ export const ColouredLargeButtonWithIcon = styled(Button)`
   font-weight: ${font.button.buttonLarge.fontWeight};
 `;
 
-
 export const StrokeLargeButtonWithIcon = styled(Button)`
   width: ${sizes.buttonLargeWithIcon.width}px;
   height: ${sizes.buttonLargeWithIcon.height}px;
@@ -115,7 +113,7 @@ export const StrokeLargeButtonWithIcon = styled(Button)`
 
 export const StrokeMediumButtonWithIcon = styled(Button)`
   width: ${sizes.buttonMediumWithIcon.width}px;
-  height: ${sizes.buttonMediumWithIcon.height}px; 
+  height: ${sizes.buttonMediumWithIcon.height}px;
   background: ${ColorPalette.purple.purple5};
   font-size: ${font.button.buttonMedium.fontSize}px;
   font-weight: ${font.button.buttonMedium.fontWeight};
@@ -123,7 +121,7 @@ export const StrokeMediumButtonWithIcon = styled(Button)`
 
 export const StrokeSmallButtonWithIcon = styled(Button)`
   width: ${sizes.buttonSmallWithIcon.width}px;
-  height: ${sizes.buttonSmallWithIcon.height}px; 
+  height: ${sizes.buttonSmallWithIcon.height}px;
   background: ${ColorPalette.purple.purple5};
   font-size: ${font.button.buttonSmall.fontSize}px;
   font-weight: ${font.button.buttonSmall.fontWeight};

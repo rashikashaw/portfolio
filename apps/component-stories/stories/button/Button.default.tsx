@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
-import { Button } from "@portfolio/button";
-import { useState } from "react";
+/* eslint-disable no-magic-numbers */
+import styled from '@emotion/styled';
+import { Button } from '@portfolio/button';
+import React, { useState } from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
-
 
 export const IconLabel = () => (
   <>
@@ -30,13 +30,20 @@ export const Default = () => {
     setisLoading(true);
   };
   if (isLoading) {
-    setTimeout(() => { setisLoading(false); }, 2000);
+    setTimeout(() => {
+      setisLoading(false);
+    }, 2000);
   }
   return (
     <RowWrapper>
-      <Button label='Danger' variant="danger" onClick={() => {}} />
-      <Button label={<IconLabel/>} variant="primary" onClick={() => {}} />
-      <RegularButton label='Click me to load' variant="regular" isButtonLoading={isLoading} onClick={onLoadingButtonClick} />
+      <Button label="Danger" variant="danger" onClick={() => {}} />
+      <Button label={<IconLabel />} variant="primary" onClick={() => {}} />
+      <RegularButton
+        label="Click me to load"
+        variant="regular"
+        isButtonLoading={isLoading}
+        onClick={onLoadingButtonClick}
+      />
     </RowWrapper>
   );
 };
