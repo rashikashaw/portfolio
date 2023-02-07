@@ -23,6 +23,8 @@ model user {
   business_name String?
   tax_number    String?
   product product[]
+  order order[]
+  cart cart[]
 }
 
 model product {
@@ -35,4 +37,59 @@ model product {
   updated_at DateTime @updatedAt
   seller user @relation(fields: [seller_id], references: [id])
   seller_id Int
+  inventory inventory[]
+  // inventory_history inventory_history[]
+  order_product_map order_product_map[]
+  cart_product_map cart_product_map[]
+}
+
+model inventory {
+  id Int @id @default(autoincrement())
+  product product @relation(fields: [product_id], references: [id])
+  product_id Int
+  count Int
+  // inventory_history inventory_history[]
+}
+
+// model inventory_history {
+//   id Int @id @default(autoincrement())
+//   inventory inventory @relation(fields: [inventory_id], references: [id])
+//   inventory_id Int
+//   product product @relation(fields: [product_id], references: [id])
+//   product_id Int
+//   count Int
+//   date DateTime
+// }
+
+model order {
+  id Int @id @default(autoincrement())
+  buyer user @relation(fields: [buyer_id], references: [id])
+  buyer_id Int
+  date DateTime @default(now())
+  order_product_map order_product_map[]
+}
+
+model order_product_map {
+  id Int @id @default(autoincrement())
+  order order @relation(fields: [order_id], references: [id])
+  order_id Int
+  product product @relation(fields: [product_id], references: [id])
+  product_id Int
+  quantity Int
+}
+
+model cart {
+  id Int @id @default(autoincrement())
+  user user @relation(fields: [user_id], references: [id])
+  user_id Int
+  cart_product_map cart_product_map[]
+}
+
+model cart_product_map {
+  id Int @id @default(autoincrement())
+  cart cart @relation(fields: [cart_id], references: [id])
+  cart_id Int
+  product product @relation(fields: [product_id], references: [id])
+  product_id Int
+  count Int
 }
