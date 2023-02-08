@@ -2,9 +2,14 @@ module.exports = {
   env: {
     'es2021': true,
   },
-  extends: [ 'turbo', 'prettier', 'plugin:react/recommended'],
+  extends: [ 'next', 'turbo', 'prettier', 'plugin:react/recommended'],
   plugins: ['@typescript-eslint', 'react', 'turbo'],
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    babelOptions: {
+      presets: [require.resolve("next/babel")],
+    },
+  },
   rules: {
     'react/jsx-key': 'off',
     'object-curly-spacing': ['error', 'always'],
