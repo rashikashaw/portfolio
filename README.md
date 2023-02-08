@@ -7,7 +7,7 @@ Apps are located in `apps/` directory and packages are located in `packages/` di
 Click the below links to open the deployed apps.
 ### Apps and Packages
 
-- [`evo-gym`](https://portfolio-storybook.netlify.app): A simple fitness center website developed using React and Tailwind and deployed using Netlify.
+- [`evo-gym`](https://template-fitness-center.netlify.app/): A simple fitness center website developed using React and Tailwind and deployed using Netlify.
 - `self-made`: Under contruction e-commerce web sites for creative home crafts using React and Redux with APIs using Firebase.
 - [`component-stories`](https://portfolio-storybook.netlify.app): Storybook for shared components, hooks, design system and helper utilites. Hosted using Netlify.
 
