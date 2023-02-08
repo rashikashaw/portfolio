@@ -1,4 +1,0 @@
-{
-  "extends": "@portfolio/tsconfig/react.json",
-  "include": ["src"]
-}
