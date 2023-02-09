@@ -3,7 +3,7 @@ module.exports = {
   reactStrictMode: true,
   images: {
     domains: [
-      'rb.gy',
+      "rb.gy", "cdn.sanity.io", "lh3.googleusercontent.com", "www.gravatar.com"
     ]
   }
 }
