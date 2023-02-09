@@ -1,0 +1,5 @@
+{
+  "extends": "@portfolio/tsconfig/nextjs.json",
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "apple-redesign-be/tailwindcss.config.cjs"],
+  "exclude": ["node_modules"]
+}
