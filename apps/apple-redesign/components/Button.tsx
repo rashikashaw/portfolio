@@ -10,7 +10,7 @@ type ButtonProps = {
 }
 
 export const Button = (props: ButtonProps) => {
-  const {label, onClick, width, padding} = props;
+  const {label, onClick, width, padding, isButtonLoading} = props;
   return (
     <button className={`ease group relative z-30 box-border inline-flex 
       ${
@@ -32,8 +32,9 @@ export const Button = (props: ButtonProps) => {
     }
     onClick={onClick}>
       <span className="absolute bottom-0 right-0 -mb-8 -mr-5 h-20 w-8 translate-x-1 rotate-45 transform bg-white opacity-10 transition-all duration-300 ease-out group-hover:translate-x-0"></span>
+      <span className="absolute bottom-0 right-0 -mb-8 -mr-5 h-20 w-8 translate-x-1 rotate-45 transform bg-white opacity-10 transition-all duration-300 ease-out group-hover:translate-x-0"></span>
       <span className="absolute top-0 left-0 -mt-1 -ml-12 h-8 w-20 -translate-x-1 -rotate-45 transform bg-white opacity-10 transition-all duration-300 ease-out group-hover:translate-x-0"></span>
-      {label}
+      {isButtonLoading ? "Loading..." : label}
     </button>
   );
 };
