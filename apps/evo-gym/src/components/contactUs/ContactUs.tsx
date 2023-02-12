@@ -25,9 +25,7 @@ export const ContactUs = (props: ContactUsProps) => {
 
   return (
     <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
-      <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
-      >
+      <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
         {/* HEADER */}
         <motion.div
           className="mr-7 md:w-3/5"
@@ -44,9 +42,9 @@ export const ContactUs = (props: ContactUsProps) => {
             <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
           </HText>
           <p className="my-5">
-            Congue adipiscing risus commodo placerat. Tellus et in feugiat nisl
-            sapien vel rhoncus. Placerat at in enim pellentesque. Nulla
-            adipiscing leo egestas nisi elit risus sit. Nunc cursus sagittis.
+            Congue adipiscing risus commodo placerat. Tellus et in feugiat nisl sapien vel rhoncus.
+            Placerat at in enim pellentesque. Nulla adipiscing leo egestas nisi elit risus sit. Nunc
+            cursus sagittis.
           </p>
         </motion.div>
 
@@ -79,10 +77,9 @@ export const ContactUs = (props: ContactUsProps) => {
                 })}
               />
               {errors.name && (
-                <p className="mt-1 text-primary-500">
+                <p className="text-primary-500 mt-1">
                   {errors.name.type === 'required' && 'This field is required.'}
-                  {errors.name.type === 'maxLength' &&
-                    'Max length is 100 char.'}
+                  {errors.name.type === 'maxLength' && 'Max length is 100 char.'}
                 </p>
               )}
 
@@ -96,9 +93,8 @@ export const ContactUs = (props: ContactUsProps) => {
                 })}
               />
               {errors.email && (
-                <p className="mt-1 text-primary-500">
-                  {errors.email.type === 'required' &&
-                    'This field is required.'}
+                <p className="text-primary-500 mt-1">
+                  {errors.email.type === 'required' && 'This field is required.'}
                   {errors.email.type === 'pattern' && 'Invalid email address.'}
                 </p>
               )}
@@ -114,17 +110,15 @@ export const ContactUs = (props: ContactUsProps) => {
                 })}
               />
               {errors.message && (
-                <p className="mt-1 text-primary-500">
-                  {errors.message.type === 'required' &&
-                    'This field is required.'}
-                  {errors.message.type === 'maxLength' &&
-                    'Max length is 2000 char.'}
+                <p className="text-primary-500 mt-1">
+                  {errors.message.type === 'required' && 'This field is required.'}
+                  {errors.message.type === 'maxLength' && 'Max length is 2000 char.'}
                 </p>
               )}
 
               <button
                 type="submit"
-                className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
+                className="bg-secondary-500 mt-5 rounded-lg px-20 py-3 transition duration-500 hover:text-white"
               >
                 SUBMIT
               </button>
@@ -142,12 +136,8 @@ export const ContactUs = (props: ContactUsProps) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1] md:before:content-evolvetext">
-              <img
-                className="w-full"
-                alt="contact-us-page-graphic"
-                src={ContactUsPageGraphic}
-              />
+            <div className="md:before:content-evolvetext w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1]">
+              <img className="w-full" alt="contact-us-page-graphic" src={ContactUsPageGraphic} />
             </div>
           </motion.div>
         </div>

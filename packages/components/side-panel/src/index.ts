@@ -1,2 +1,2 @@
-export { SidePanel } from "./SidePanel";
-export { useSidePanel } from "./hooks";
+export { SidePanel } from './SidePanel';
+export { useSidePanel } from './hooks';

@@ -1,19 +1,19 @@
-import styled from "@emotion/styled";
-import { useOutsideClick } from "@portfolio/hooks";
-import { RiCloseFill } from "react-icons/ri";
+import styled from '@emotion/styled';
+import { useOutsideClick } from '@portfolio/hooks';
+import { RiCloseFill } from 'react-icons/ri';
 
 type SidePanelProps = {
   header: React.ReactNode;
   body: React.ReactNode;
   isOpen?: boolean;
   close: () => void;
-}
+};
 
-const DrawerWrapper = styled.div<{isOpen: SidePanelProps['isOpen']}>`
+const DrawerWrapper = styled.div<{ isOpen: SidePanelProps['isOpen'] }>`
   top: 0;
   right: 0;
   height: 100%;
-  max-width: ${p => p.isOpen ? "300px" : "0px"};
+  max-width: ${(p) => (p.isOpen ? '300px' : '0px')};
   transition: max-width 1s;
   display: block;
   padding: 16px;
@@ -41,7 +41,7 @@ const IconWrapper = styled(RiCloseFill)`
 `;
 
 export const SidePanel = (props: SidePanelProps) => {
-  const {header, body, close, isOpen} = props;
+  const { header, body, close, isOpen } = props;
   const ref = useOutsideClick(close);
   return (
     <DrawerWrapper isOpen={isOpen} ref={ref}>
@@ -50,6 +50,6 @@ export const SidePanel = (props: SidePanelProps) => {
         {header}
       </HeaderWrapper>
       {body}
-    </DrawerWrapper> 
+    </DrawerWrapper>
   );
 };

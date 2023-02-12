@@ -41,14 +41,14 @@ const getButtonFontColor = (variant: ButtonProps['variant']) => {
   return 'inherit';
 };
 
-const ButtonBase = styled.button<{variant: ButtonProps['variant']}>`
+const ButtonBase = styled.button<{ variant: ButtonProps['variant'] }>`
   min-height: 32px;
   min-width: 96px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({ variant })=> getButtonBackground(variant)};
-  color: ${({ variant })=> getButtonFontColor(variant)};
+  background-color: ${({ variant }) => getButtonBackground(variant)};
+  color: ${({ variant }) => getButtonFontColor(variant)};
   border: 1px solid rgb(0, 0, 0, 0.1);
   border-radius: 6px;  
   cursor: pointer;
@@ -57,8 +57,10 @@ const ButtonBase = styled.button<{variant: ButtonProps['variant']}>`
   font-weight: 400;
   gap: 8px;
   &:hover {
-    background-color: ${({ variant })=> getButtonBackgroundHover(variant)};
-    ${({ variant }) => variant === 'regular' && `
+    background-color: ${({ variant }) => getButtonBackgroundHover(variant)};
+    ${({ variant }) =>
+      variant === 'regular' &&
+      `
       border-color: #1677FF;
       color: #1677FF;
     `}}
@@ -67,12 +69,12 @@ const ButtonBase = styled.button<{variant: ButtonProps['variant']}>`
 
 const Spinner = styled(Spin)`
   width: 24px;
-  height:24px;
+  height: 24px;
 `;
 
 export const Button = (props: ButtonProps) => {
   const {
-    label, 
+    label,
     onClick,
     className,
     variant = 'regular',
@@ -82,12 +84,17 @@ export const Button = (props: ButtonProps) => {
   const onButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (!isButtonLoading) {
       onClick(e);
-    };
+    }
   };
 
   return (
-    <ButtonBase className={className} onClick={onButtonClick} disabled={isButtonDisabled} variant={variant}>
-      {!isButtonLoading && label} 
+    <ButtonBase
+      className={className}
+      onClick={onButtonClick}
+      disabled={isButtonDisabled}
+      variant={variant}
+    >
+      {!isButtonLoading && label}
       {isButtonLoading && <Spinner />}
     </ButtonBase>
   );

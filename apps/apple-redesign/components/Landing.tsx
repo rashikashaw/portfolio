@@ -1,6 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import { Button } from "./Button";
+import React from 'react';
+import Image from 'next/image';
+import { Button } from './Button';
 import { motion } from 'framer-motion';
 
 export const Landing = () => {
@@ -15,7 +15,7 @@ export const Landing = () => {
         variants={{
           hidden: { opacity: 0, x: -50 },
           visible: { opacity: 1, x: 0 },
-        }}> 
+        }}>
         <div className="space-y-8">
           <h1 className="space-y-3 text-5xl font-semibold tracking-wide lg:text-6xl xl:text-7xl">
             <span className="block bg-gradient-to-r from-pink-400 via-purple-700 to-indigo-800 bg-clip-text text-transparent">Powered</span>
@@ -37,7 +37,7 @@ export const Landing = () => {
         variants={{
           hidden: { opacity: 0, x: 50 },
           visible: { opacity: 1, x: 0 },
-        }}> 
+        }}>
         <div className="relative hidden h-[450px] w-[450px] transition-all md:flex lg:h-[650px] lg:w-[600px]">
           <Image src="/iphone.png" fill style={{ objectFit: 'contain' }} alt="" />
         </div>

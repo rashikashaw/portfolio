@@ -1,7 +1,7 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
 export const context = createContext({
   isOpen: false,
-  toggle: () => {}
+  toggle: () => {},
 });
 export const Provider = context.Provider;

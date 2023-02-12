@@ -1,1 +1,1 @@
-export { TextOverFlow } from './TextOverFlow'
+export { TextOverFlow } from './TextOverFlow';

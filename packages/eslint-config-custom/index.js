@@ -2,14 +2,8 @@ module.exports = {
   env: {
     'es2021': true,
   },
-  extends: [ 'next', 'turbo', 'prettier', 'plugin:react/recommended'],
-  plugins: ['@typescript-eslint', 'react', 'turbo'],
+  extends: ['turbo', 'prettier', 'plugin:react/recommended'],
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    babelOptions: {
-      presets: [require.resolve("next/babel")],
-    },
-  },
   rules: {
     'react/jsx-key': 'off',
     'object-curly-spacing': ['error', 'always'],
@@ -23,23 +17,19 @@ module.exports = {
     }],
     'eol-last': ['error', 'always'],
     'func-call-spacing': ['error', 'never'],
-    // eslint-disable-next-line no-magic-numbers
-    indent: ['error', 2, {
-      'ignoreComments': true,
-    }],
     'jsx-quotes': ['error', 'prefer-double'],
     'key-spacing': ['error'],
     'max-len': ['error', {
       code: 100,
       ignoreComments: true,
       ignoreUrls: true,
-      ignoreString: true,
+      ignoreStrings: true,
       ignoreRegExpLiterals: true,
     }],
-    'no-extra-parens': ['error', 'all'],
     'no-trailing-spaces': ['error'],
     'no-whitespace-before-property': ['error'],
-    semi: ['error', 'always'],
+    semi: 'off',
+    '@typescript-eslint/semi': ['error'],
     'default-case': ['error'],
     'dot-notation': ['error'],
     eqeqeq: ['error'],
@@ -47,7 +37,6 @@ module.exports = {
     'no-else-return': ['error'],
     'no-inline-comments': ['error'],
     'no-lone-blocks': ['error'],
-    // 'no-magic-numbers': ['error'],
     'no-return-assign': ['error', 'always'],
     'no-unneeded-ternary': ['error'],
     'no-unused-expressions': ['error'],
@@ -57,5 +46,8 @@ module.exports = {
     'space-infix-ops': ['error'],
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    '@typescript-eslint/member-delimiter-style': ['error'],
   },
+  plugins: ['@typescript-eslint', 'react', 'turbo'],
 };
