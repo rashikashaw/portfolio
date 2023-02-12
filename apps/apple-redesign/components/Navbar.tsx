@@ -5,7 +5,7 @@ import { MagnifyingGlassIcon, ShoppingBagIcon, UserIcon } from '@heroicons/react
 
 export const Navbar = () => {
   const session = false;
-  return <header className="sticky z-30 top-0 flex w-full items-center justify-between bg-[#E7ECEE] p-4">
+  return <header className="sticky z-50 top-0 flex w-full items-center justify-between bg-[#E7ECEE] p-4">
     <div className="flex items-center justify-center cursor-pointer md:w-1/5">
       <Link href="/">
         <div className="relative h-10 w-5 opacity-75 transition hover:opacity-100">
