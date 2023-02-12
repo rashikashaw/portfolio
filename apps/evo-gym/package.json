@@ -1,5 +1,5 @@
 {
-  "name": "evo-gym",
+  "name": "@portfolio/evo-gym",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,15 +7,14 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "TIMING=1 eslint \"**/*.ts*\"",
-    "format": "prettier --write 'src/**/*.*(js|cjs|html|css|ts|tsx)'"
+    "lint": "TIMING=1 eslint --fix \"**/*.ts*\""
   },
   "dependencies": {
     "@heroicons/react": "^2.0.14",
     "framer-motion": "^9.0.1",
-    "react": "^17.0.2",
+    "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "1.0.12",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.0"
   },
   "devDependencies": {
@@ -24,11 +23,12 @@
     "@types/react-anchor-link-smooth-scroll": "1.0.2",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
+    "@portfolio/eslint-config-custom": "workspace:*",
     "autoprefixer": "^10.4.13",
+    "eslint-plugin-turbo": "^0.0.7",
+    "eslint": "^8.34.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
-    "@portfolio/eslint-config-custom": "*",
-    "prettier-plugin-tailwindcss": "^0.2.2",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.3",
     "vite": "^4.0.0"

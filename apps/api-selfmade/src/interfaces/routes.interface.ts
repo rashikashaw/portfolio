@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-export interface Routes {
+export type Routes = {
   path?: string;
   router: Router;
-}
+};

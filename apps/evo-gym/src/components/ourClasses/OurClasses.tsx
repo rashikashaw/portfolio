@@ -51,10 +51,8 @@ const classes: Array<ClassType> = [
 export const OurClasses = (props: OurClassesProps) => {
   const { setSelectedPage } = props;
   return (
-    <section id="ourclasses" className="w-full bg-primary-100 py-40">
-      <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
-      >
+    <section id="ourclasses" className="bg-primary-100 w-full py-40">
+      <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}>
         <motion.div
           className="mx-auto w-5/6"
           initial="hidden"
@@ -69,10 +67,9 @@ export const OurClasses = (props: OurClassesProps) => {
           <div className="md:w-3/5">
             <HText>OUR CLASSES</HText>
             <p className="py-5">
-              Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-              tellus quam porttitor. Mauris velit euismod elementum arcu neque
-              facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-              enim mattis odio in risus nunc.
+              Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est tellus quam
+              porttitor. Mauris velit euismod elementum arcu neque facilisi. Amet semper tortor
+              facilisis metus nibh. Rhoncus sit enim mattis odio in risus nunc.
             </p>
           </div>
         </motion.div>

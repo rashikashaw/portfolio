@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import React from "react";
+import styled from '@emotion/styled';
+import React from 'react';
 import { Tooltip } from 'antd';
 
 const Wrapper = styled.div`
@@ -21,23 +21,22 @@ export type TextOverFlowProps = {
   length: number;
   text: string;
   children?: React.ReactNode;
-}
+};
 
 export const TextOverFlow = (props: TextOverFlowProps) => {
-  const { length, text} = props;
+  const { length, text } = props;
   return (
     <Wrapper>
-      {
-        text.length > length ?
+      {text.length > length ? (
         <TextWrapper>
-          <Tooltip title={text}>      
-            {text.slice(0, length)}{'...'} 
+          <Tooltip title={text}>
+            {text.slice(0, length)}
+            {'...'}
           </Tooltip>
-        </TextWrapper> :
-        <TextWrapper>
-          {text}
         </TextWrapper>
-      }
+      ) : (
+        <TextWrapper>{text}</TextWrapper>
+      )}
     </Wrapper>
-  )
-}
+  );
+};

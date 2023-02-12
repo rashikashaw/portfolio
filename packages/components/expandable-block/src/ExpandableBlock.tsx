@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
-import React, { useEffect, useState } from "react";
-import { ColorPalette } from "@portfolio/css-util";
+import styled from '@emotion/styled';
+import React, { useEffect, useState } from 'react';
+import { ColorPalette } from '@portfolio/css-util';
 
 const Wrapper = styled.div`
   display: flex;
@@ -22,8 +22,8 @@ const HeaderWrapper = styled.div`
 
 const BodyWrapper = styled.div<{ isOpen: boolean }>`
   height: 100px;
-  max-height: ${({ isOpen }) => isOpen ? '100px' : '0px'};
-  border: ${({ isOpen }) => isOpen ? '1px' : '0px'} solid black;
+  max-height: ${({ isOpen }) => (isOpen ? '100px' : '0px')};
+  border: ${({ isOpen }) => (isOpen ? '1px' : '0px')} solid black;
   transition: max-height 200ms ease-in-out;
   width: 100%;
   display: flex;
@@ -48,12 +48,13 @@ type ExpandableBlockProps = {
 export const ExpandableBlock = (props: ExpandableBlockProps) => {
   const { className, header, body, onToggle, close } = props;
 
-
   const [isOpen, setIsOpen] = useState(false);
   const onHeaderClick = () => {
     const newIsopen = !isOpen;
     setIsOpen(newIsopen);
-    onToggle && onToggle(newIsopen)
+    if (onToggle) {
+      onToggle(newIsopen);
+    }
   };
   useEffect(() => {
     if (close && isOpen) {
@@ -63,10 +64,8 @@ export const ExpandableBlock = (props: ExpandableBlockProps) => {
 
   return (
     <Wrapper className={className}>
-      <HeaderWrapper onClick={onHeaderClick} >
-        {header}
-      </HeaderWrapper>
-      <BodyWrapper isOpen={isOpen}>{body}</BodyWrapper> 
+      <HeaderWrapper onClick={onHeaderClick}>{header}</HeaderWrapper>
+      <BodyWrapper isOpen={isOpen}>{body}</BodyWrapper>
     </Wrapper>
   );
 };

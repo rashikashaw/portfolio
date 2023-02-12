@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "@emotion/styled";
-import { Tag } from "./Tag";
-import { useOutsideClick } from "@portfolio/hooks";
+import React, { useState } from 'react';
+import styled from '@emotion/styled';
+import { Tag } from './Tag';
+import { useOutsideClick } from '@portfolio/hooks';
 
 const Wrapper = styled.div`
   display: flex;
@@ -18,12 +18,12 @@ const Newtag = styled.div`
   border-radius: 8px;
   background-color: white;
   &:hover {
-    border-color: #1677FF;
-    color: #1677FF;
+    border-color: #1677ff;
+    color: #1677ff;
   }
 `;
 
-const InputWrapper = styled.div` 
+const InputWrapper = styled.div`
   height: 35px;
   width: 100px;
   display: flex;
@@ -46,7 +46,7 @@ const InputBox = styled.input`
     border-color: #1677FF;
 `;
 
-export type TagsProps =  {
+export type TagsProps = {
   tags: string[];
   onTagAdd: (tag: string) => void;
   onTagDelete: (tagIndex: number) => void;
@@ -56,8 +56,8 @@ export const Tags = (props: TagsProps) => {
   const { tags, onTagAdd, onTagDelete } = props;
   const [inputValue, setInputvalues] = useState('');
   const [isShown, setIsShown] = useState(false);
-  const onChangeHandler =(e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputvalues(e.target.value)
+  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputvalues(e.target.value);
   };
   const handleClick = () => {
     setIsShown(!isShown);
@@ -70,26 +70,36 @@ export const Tags = (props: TagsProps) => {
       const target = e.target as HTMLInputElement;
       onTagAdd(target.value);
       setInputvalues('');
-      setIsShown(false)
+      setIsShown(false);
     }
     if (e.key === 'Enter' && inputValue.length === 0) {
-      setIsShown(false)
+      setIsShown(false);
     }
   };
 
   return (
     <Wrapper>
-        {tags && tags.map((tag,i) => (
-          <Tag key={i} tag={tag} onTagDelete={() => { onTagDelete(i); }} />
+      {tags &&
+        tags.map((tag, i) => (
+          <Tag
+            key={i}
+            tag={tag}
+            onTagDelete={() => {
+              onTagDelete(i);
+            }}
+          />
         ))}
-      {!isShown &&
-      <Newtag onClick={handleClick}>New Tag</Newtag>
-      }   
-      { isShown &&
+      {!isShown && <Newtag onClick={handleClick}>New Tag</Newtag>}
+      {isShown && (
         <InputWrapper ref={outsideClickRef}>
-          <InputBox onKeyDown={onEnterKey} onChange={onChangeHandler} value={inputValue} autoFocus />
+          <InputBox
+            onKeyDown={onEnterKey}
+            onChange={onChangeHandler}
+            value={inputValue}
+            autoFocus
+          />
         </InputWrapper>
-      } 
+      )}
     </Wrapper>
   );
 };

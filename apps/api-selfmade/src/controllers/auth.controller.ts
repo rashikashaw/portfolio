@@ -14,7 +14,7 @@ class AuthController {
 
       res.status(201).json({ data: signUpUserData, message: 'signup' });
     } catch (error) {
-      next(error)
+      next(error);
     }
   };
 
@@ -30,7 +30,11 @@ class AuthController {
     }
   };
 
-  public logOut = async (req: RequestWithUser, res: Response, next: NextFunction): Promise<void> => {
+  public logOut = async (
+    req: RequestWithUser,
+    res: Response,
+    next: NextFunction,
+  ): Promise<void> => {
     try {
       const userData: User = req.user;
       const logOutUserData: User = await this.authService.logout(userData);

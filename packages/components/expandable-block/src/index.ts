@@ -1,2 +1,1 @@
-export { ExpandableBlock } from "./ExpandableBlock";
-
+export { ExpandableBlock } from './ExpandableBlock';

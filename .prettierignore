@@ -1,0 +1,7 @@
+*.d.ts
+**/assets
+**/dist
+**/.next
+**/.turbo
+node_modules
+**/node_modules
