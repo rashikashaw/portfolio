@@ -3,8 +3,8 @@
  This monorepo🧳 is my one stop for all web apps and packages.
 
 ## 👓 What's inside?
-- All apps can befound in `apps/`
-- Packages are in `packages/ui/`
+- 📱 Apps can befound in `apps/`
+- 📦 Packages are in `packages/ui/`
 
 ### Apps and Packages
 Click the below links to open the deployed apps.
