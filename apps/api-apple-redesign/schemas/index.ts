@@ -1,2 +1,3 @@
 import { catgeory } from "./category";
-export const schemaTypes = [catgeory];
+import { product } from "./product";
+export const schemaTypes = [catgeory, product];
