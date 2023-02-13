@@ -1,0 +1,24 @@
+{
+  "name": "@portfolio/profile-dropdown",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "TIMING=1 eslint \"**/*.ts*\"",
+    "format": "prettier --write 'src/**/*.*(js|cjs|html|css|ts|tsx)'"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "@portfolio/hooks": "*",
+    "@portfolio/css-util": "*",
+    "react-icons": "^4.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-custom": "*",
+    "@portfolio/tsconfig": "*",
+    "typescript": "^4.9.4"
+  }
+}
