@@ -1,17 +1,14 @@
 # Portfolio monorepo
 
-This is a hub of my personal projects and packages.
+ This monorepo🧳 is my one stop for all web apps and packages.
 
-## What's inside?
-Apps are located in `apps/` directory and packages are located in `packages/` directory.
-Click the below links to open the deployed apps.
+## 👓 What's inside?
+- All apps can befound in `apps/`
+- Packages are in `packages/ui/`
+
 ### Apps and Packages
-
-- [`evo-gym`](https://template-fitness-center.netlify.app/): A simple fitness center website developed using React and Tailwind and deployed using Netlify.
-- `self-made`: Under contruction e-commerce web sites for creative home crafts using React and Redux with APIs using Firebase.
-- [`component-stories`](https://portfolio-storybook.netlify.app): Storybook for shared components, hooks, design system and helper utilites. Hosted using Netlify.
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Click the below links to open the deployed apps.
+- [`component-stories`](https://portfolio-storybook.netlify.app): Storybook for shared components, hooks, design system and helper utilites.
 
 ### Utilities
 
