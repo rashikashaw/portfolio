@@ -3,10 +3,10 @@ type Category = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  _type: "category";
+  _type: 'category';
   slug: {
-    _type: "slug";
+    _type: 'slug';
     current: string;
   };
   title: string;
-}
+};

@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'api-apple-redesign',
 
-  projectId: 'jtjlvev0',
+  projectId: '42cobjvo',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],

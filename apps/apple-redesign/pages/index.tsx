@@ -3,12 +3,12 @@ import Head from 'next/head';
 import React from 'react';
 import { Landing } from '../components/Landing';
 import { Navbar } from '../components/Navbar';
-import { fetchCategories } from "../utils/fetchCategories";
-import { Tab } from "@headlessui/react";
+import { fetchCategories } from '../utils/fetchCategories';
+import { Tab } from '@headlessui/react';
 
 type Props = {
   categories: Category[];
-}
+};
 const Home: NextPage = () => {
   return (
     <div>
@@ -20,8 +20,8 @@ const Home: NextPage = () => {
       <main className="relative h-[200vh] bg-[#E7ECEE]">
         <Landing />
       </main>
-      <section className='relative z-40 -mt-[100vh] min-h-screen bg-[#141414]'>
-        <div className='justify-center items-center space-y-10 py-16'>
+      <section className="relative z-40 -mt-[100vh] min-h-screen bg-[#141414]">
+        <div className="justify-center items-center space-y-10 py-16">
           <h1 className="text-center text-4xl font-medium tracking-wide text-white md:text-5xl">
             New Promo
           </h1>
