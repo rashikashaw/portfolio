@@ -5,11 +5,19 @@ import { Landing } from '../components/Landing';
 import { Navbar } from '../components/Navbar';
 import { fetchCategories } from '../utils/fetchCategories';
 import { Tab } from '@headlessui/react';
+import { fetchProducts } from '../utils/fetchProducts';
 
 type Props = {
-  categories: Category[];
+  categories: Categorys[];
+  products: Products[];
 };
-const Home: NextPage = () => {
+
+const Home: NextPage = ({ categories, products }: Props) => {
+  // const showProducts = (category: number) => {
+  //   return products
+  //     .filter((product) => product.category._ref === categories[category]._id)
+  //     .map((product) => <Product product={product} key={product._id} />);
+  // };
   return (
     <div>
       <Head>
@@ -27,21 +35,23 @@ const Home: NextPage = () => {
           </h1>
           <Tab.Group>
             <Tab.List className="flex justify-center">
-              {/* {categories.map((category) => (
+              {categories.map((category) => (
                 <Tab
                   key={category._id}
                   id={category._id}
                   className={({ selected }) =>
-                    `whitespace-nowrap rounded-t-lg py-3 px-5 text-sm font-light outline-none md:py-4 md:px-6 md:text-base ${
+                    `whitespace-nowrap rounded-t-lg py-3 
+                    px-5 text-sm font-light outline-none
+                    md:py-4 md:px-6 md:text-base ${
                       selected
-                        ? "borderGradient bg-[#35383C] text-white"
-                        : "border-b-2 border-[#35383C] text-[#747474]"
+                        ? 'borderGradient bg-[#35383C] text-white'
+                        : 'border-b-2 border-[#35383C] text-[#747474]'
                     }`
                   }
                 >
                   {category.title}
                 </Tab>
-              ))} */}
+              ))}
             </Tab.List>
             {/* <Tab.Panels className="mx-auto max-w-fit pt-10 pb-24 sm:px-4">
               <Tab.Panel className="tabPanel">{showProducts(0)}</Tab.Panel>
@@ -57,11 +67,13 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const categories = await fetchCategories();
+  const products = await fetchProducts();
   return {
     props: {
       categories,
+      products,
     },
   };
 };
