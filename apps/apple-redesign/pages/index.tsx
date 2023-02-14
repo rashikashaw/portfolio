@@ -6,6 +6,7 @@ import { Navbar } from '../components/Navbar';
 import { fetchCategories } from '../utils/fetchCategories';
 import { Tab } from '@headlessui/react';
 import { fetchProducts } from '../utils/fetchProducts';
+import Product from '../components/Products';
 
 type Props = {
   categories: Categorys[];
@@ -13,11 +14,11 @@ type Props = {
 };
 
 const Home: NextPage = ({ categories, products }: Props) => {
-  // const showProducts = (category: number) => {
-  //   return products
-  //     .filter((product) => product.category._ref === categories[category]._id)
-  //     .map((product) => <Product product={product} key={product._id} />);
-  // };
+  const showProducts = (category: number) => {
+    return products
+      .filter((product) => product.category._ref === categories[category]._id)
+      .map((product) => <Product product={product} key={product._id} />);
+  };
   return (
     <div>
       <Head>
@@ -28,7 +29,7 @@ const Home: NextPage = ({ categories, products }: Props) => {
       <main className="relative h-[200vh] bg-[#E7ECEE]">
         <Landing />
       </main>
-      <section className="relative z-40 -mt-[100vh] min-h-screen bg-[#141414]">
+      <section className="relative z-40 -mt-[100vh] min-h-screen bg-[#1B1B1B]">
         <div className="justify-center items-center space-y-10 py-16">
           <h1 className="text-center text-4xl font-medium tracking-wide text-white md:text-5xl">
             New Promo
@@ -53,12 +54,12 @@ const Home: NextPage = ({ categories, products }: Props) => {
                 </Tab>
               ))}
             </Tab.List>
-            {/* <Tab.Panels className="mx-auto max-w-fit pt-10 pb-24 sm:px-4">
+            <Tab.Panels className="mx-auto flex-row max-w-fit pt-10 pb-24 sm:px-4">
               <Tab.Panel className="tabPanel">{showProducts(0)}</Tab.Panel>
               <Tab.Panel className="tabPanel">{showProducts(1)}</Tab.Panel>
               <Tab.Panel className="tabPanel">{showProducts(2)}</Tab.Panel>
               <Tab.Panel className="tabPanel">{showProducts(3)}</Tab.Panel>
-            </Tab.Panels> */}
+            </Tab.Panels>
           </Tab.Group>
         </div>
       </section>
