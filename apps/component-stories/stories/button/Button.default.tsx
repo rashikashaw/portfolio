@@ -1,6 +1,6 @@
 /* eslint-disable no-magic-numbers */
 import styled from '@emotion/styled';
-import { Button } from '@portfolio/button';
+import { Button } from 'button';
 import React, { useState } from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
 

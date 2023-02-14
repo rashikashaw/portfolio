@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/css-util",
+  "name": "css-util",
   "version": "0.0.0",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
@@ -8,8 +8,8 @@
     "lint": "TIMING=1 eslint --fix \"**/*.ts*\""
   },
   "devDependencies": {
-    "@portfolio/eslint-config-custom": "workspace:*",
-    "@portfolio/tsconfig": "workspace:*",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
     "eslint": "^8.34.0",
     "eslint-plugin-turbo": "^0.0.7",
     "typescript": "^4.5.2"

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Dropdown } from '@portfolio/dropdown';
+import { Dropdown } from 'dropdown';
 import { CgProfile } from 'react-icons/cg';
 import { FaProductHunt } from 'react-icons/fa';
 import styled from '@emotion/styled';
 import { RxCounterClockwiseClock } from 'react-icons/rx';
-import { Button } from '@portfolio/button';
+import { Button } from 'button';
 
 const Wrapper = styled.div`
   display: flex;

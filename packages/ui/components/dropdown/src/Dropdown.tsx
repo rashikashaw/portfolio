@@ -1,6 +1,6 @@
 import { PropsWithChildren, useState, ReactNode } from 'react';
 import styled from '@emotion/styled';
-import { useOutsideClick } from '@portfolio/hooks';
+import { useOutsideClick } from 'hooks';
 
 type DropdownOption = string | ReactNode;
 export type DropdownProps = {

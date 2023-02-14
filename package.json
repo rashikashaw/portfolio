@@ -9,7 +9,7 @@
     "format": "prettier --write '**/src/**/*.*(js|cjs|html|css|ts|tsx)'"
   },
   "devDependencies": {
-    "@portfolio/eslint-config-custom": "workspace:*",
+    "eslint-config-custom": "workspace:*",
     "eslint": "^8.34.0",
     "prettier": "latest",
     "prettier-plugin-tailwindcss": "^0.2.2",

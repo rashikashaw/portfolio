@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/api-selfmade",
+  "name": "api-selfmade",
   "version": "0.0.0",
   "description": "TypeScript + Prisma + MySQL + Express API Server",
   "author": "",
@@ -45,8 +45,8 @@
     "winston-daily-rotate-file": "^4.7.1"
   },
   "devDependencies": {
-    "@portfolio/eslint-config-custom": "workspace:*",
-    "@portfolio/tsconfig": "workspace:*",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
     "@swc/cli": "^0.1.57",
     "@swc/core": "^1.2.220",
     "@types/bcrypt": "^5.0.0",

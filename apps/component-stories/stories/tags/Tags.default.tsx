@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tags } from '@portfolio/tags';
+import { Tags } from 'tags';
 import styled from '@emotion/styled';
 
 const Wrapper = styled.div`

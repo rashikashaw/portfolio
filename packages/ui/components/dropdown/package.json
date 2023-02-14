@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/dropdown",
+  "name": "dropdown",
   "version": "1.0.0",
   "main": "src/index.ts",
   "license": "MIT",
@@ -13,12 +13,12 @@
     "react-dom": ">=18.2.0"
   },
   "dependencies": {
-    "@portfolio/css-util": "workspace:*",
-    "@portfolio/hooks": "workspace:*"
+    "css-util": "workspace:*",
+    "hooks": "workspace:*"
   },
   "devDependencies": {
-    "@portfolio/eslint-config-custom": "workspace:*",
-    "@portfolio/tsconfig": "workspace:*",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
     "eslint": "^8.34.0",
     "eslint-plugin-turbo": "^0.0.7",
     "react": "^18.2.0",

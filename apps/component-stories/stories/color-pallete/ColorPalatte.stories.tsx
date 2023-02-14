@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/react';
-import { ColorPalette } from '@portfolio/css-util';
+import { ColorPalette } from 'css-util';
 const meta: Meta = {
   title: 'Constants',
 };

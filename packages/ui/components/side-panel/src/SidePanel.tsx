@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { useOutsideClick } from '@portfolio/hooks';
+import { useOutsideClick } from 'hooks';
 import { RiCloseFill } from 'react-icons/ri';
 
 type SidePanelProps = {

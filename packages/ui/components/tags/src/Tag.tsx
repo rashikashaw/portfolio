@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { GrFormClose } from 'react-icons/gr';
-import { TextOverFlow } from '@portfolio/text-overflow';
+import { TextOverFlow } from 'text-overflow';
 
 const TagWrapper = styled.div`
   height: 20px;

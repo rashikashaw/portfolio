@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/hooks",
+  "name": "hooks",
   "version": "1.0.0",
   "main": "src/index.ts",
   "license": "MIT",
@@ -12,8 +12,8 @@
     "react-dom": ">=18.2.0"
   },
   "devDependencies": {
-    "@portfolio/eslint-config-custom": "workspace:*",
-    "@portfolio/tsconfig": "workspace:*",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
     "eslint": "^8.34.0",
     "eslint-plugin-turbo": "^0.0.7",
     "react": "^18.2.0",

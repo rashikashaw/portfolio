@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { ColorPalette } from '@portfolio/css-util';
+import { ColorPalette } from 'css-util';
 
 export const Wrapper = styled.div`
   height: 80px;

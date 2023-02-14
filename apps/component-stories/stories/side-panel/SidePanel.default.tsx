@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { Button } from '@portfolio/button';
-import { SidePanel, useSidePanel } from '@portfolio/side-panel';
+import { Button } from 'button';
+import { SidePanel, useSidePanel } from 'side-panel';
 import React, { useState } from 'react';
 import LoremIpsum from 'react-lorem-ipsum';
 

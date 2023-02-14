@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/side-panel",
+  "name": "side-panel",
   "version": "1.0.0",
   "main": "src/index.ts",
   "license": "MIT",
@@ -13,13 +13,13 @@
   },
   "dependencies": {
     "@emotion/styled": "^11.10.5",
-    "@portfolio/css-util": "workspace:*",
-    "@portfolio/hooks": "workspace:*",
+    "css-util": "workspace:*",
+    "hooks": "workspace:*",
     "react-icons": "^4.7.1"
   },
   "devDependencies": {
-    "@portfolio/eslint-config-custom": "workspace:*",
-    "@portfolio/tsconfig": "workspace:*",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
     "eslint": "^8.34.0",
     "eslint-plugin-turbo": "^0.0.7",
     "react": "^18.2.0",

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Button } from '@portfolio/button';
-import { font, sizes, ColorPalette } from '@portfolio/css-util';
+import { Button } from 'button';
+import { font, sizes, ColorPalette } from 'css-util';
 import { IoIosArrowForward } from 'react-icons/io';
 import { GoThreeBars } from 'react-icons/go';
 

@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   transpilePackages: [
-    "@portfolio/button"
+    "button"
   ],
   images: {
     domains: [

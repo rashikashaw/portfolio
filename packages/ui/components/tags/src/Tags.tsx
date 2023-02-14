@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { Tag } from './Tag';
-import { useOutsideClick } from '@portfolio/hooks';
+import { useOutsideClick } from 'hooks';
 
 const Wrapper = styled.div`
   display: flex;

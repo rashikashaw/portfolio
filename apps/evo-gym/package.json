@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/evo-gym",
+  "name": "evo-gym",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -23,7 +23,7 @@
     "@types/react-anchor-link-smooth-scroll": "1.0.2",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
-    "@portfolio/eslint-config-custom": "workspace:*",
+    "eslint-config-custom": "workspace:*",
     "autoprefixer": "^10.4.13",
     "eslint-plugin-turbo": "^0.0.7",
     "eslint": "^8.34.0",

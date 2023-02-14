@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["@portfolio/eslint-config-custom"]
+  "extends": ["eslint-config-custom"]
 }

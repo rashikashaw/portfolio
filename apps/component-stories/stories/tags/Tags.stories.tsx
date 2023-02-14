@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/react';
-import { Tags } from '@portfolio/tags';
+import { Tags } from 'tags';
 const meta: Meta = {
   title: 'Tags',
   component: Tags,
