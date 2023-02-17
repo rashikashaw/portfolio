@@ -34,11 +34,11 @@ export const cartSlice = createSlice({
 export const { addToCart, removeFromCart } = cartSlice.actions;
 export default cartSlice.reducer;
 
-export const selectBasketItems = (state: RootState) => state.cart.items;
-export const selectBasketItemsWithId = (state: RootState, id: string) => {
+export const selectCartItems = (state: RootState) => state.cart.items;
+export const selectCartItemsWithId = (state: RootState, id: string) => {
   state.cart.items.filter((item: Products) => item._id === id);
 };
-export const selectBasketTotal = (state: RootState) =>
+export const selectCartTotal = (state: RootState) =>
   state.cart.items.reduce(
     (total: number, item: Products) => (total += item.price),
     0,

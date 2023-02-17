@@ -7,6 +7,7 @@ import { fetchCategories } from '../utils/fetchCategories';
 import { Tab } from '@headlessui/react';
 import { fetchProducts } from '../utils/fetchProducts';
 import Product from '../components/Products';
+import { Cart } from '../components/Cart';
 
 type Props = {
   categories: Categorys[];
@@ -62,6 +63,7 @@ const Home: NextPage = ({ categories, products }: Props) => {
             </Tab.Panels>
           </Tab.Group>
         </div>
+        <Cart />
       </section>
     </div>
   );

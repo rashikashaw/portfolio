@@ -3,11 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MagnifyingGlassIcon, ShoppingBagIcon, UserIcon } from '@heroicons/react/24/outline';
 import { useSelector } from 'react-redux';
-import { addToCart, selectBasketItems } from '../redux/cartSlice';
+import { addToCart, selectCartItems } from '../redux/cartSlice';
+import { Cart } from './Cart';
 
 export const Navbar = () => {
   const session = false;
-  const items = useSelector(selectBasketItems);
+  const items = useSelector(selectCartItems);
   return <header className="sticky z-50 top-0 flex w-full items-center justify-between bg-[#E7ECEE] p-4">
     <div className="flex items-center justify-center cursor-pointer md:w-1/5">
       <Link href="/">

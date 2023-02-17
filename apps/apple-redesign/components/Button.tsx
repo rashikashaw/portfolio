@@ -2,8 +2,7 @@ import React from 'react';
 
 type ButtonProps = {
   label: React.ReactNode | string;
-  onClick: (event?: React.MouseEvent<HTMLButtonElement>) => void;
-  clasName: string;
+  onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
   width?: string;
   padding?: string;
   isButtonLoading?: boolean;

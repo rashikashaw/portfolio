@@ -23,7 +23,7 @@ export const Landing = () => {
             <span className="block">Driven By Values</span>
           </h1>
           <div className="space-x-8">
-            <Button label="Buy Now" onClick={() => {}} clasName=""/>
+            <Button label="Buy Now" onClick={() => {}} />
             <a className="link">Learn More</a>
           </div>
         </div>
