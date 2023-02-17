@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "@prisma/client": "^4.1.0",
-    "bcrypt": "^5.0.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
     "compression": "^1.7.4",
@@ -45,8 +44,6 @@
     "winston-daily-rotate-file": "^4.7.1"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*",
     "@swc/cli": "^0.1.57",
     "@swc/core": "^1.2.220",
     "@types/bcrypt": "^5.0.0",
@@ -66,6 +63,7 @@
     "@typescript-eslint/parser": "^5.29.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.20.0",
+    "eslint-config-custom": "workspace:*",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-turbo": "^0.0.7",
@@ -77,11 +75,12 @@
     "nodemon": "^2.0.19",
     "pm2": "^5.2.0",
     "prettier": "^2.7.1",
-    "prisma": "^4.1.0",
+    "prisma": "^4.10.1",
     "supertest": "^6.2.4",
     "ts-jest": "^28.0.7",
     "ts-node": "^10.9.1",
     "tsc-alias": "^1.7.0",
+    "tsconfig": "workspace:*",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
   }
