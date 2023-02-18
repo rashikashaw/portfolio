@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ["Poppins","sans-serif"]
-      }
+        body: ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [],
-}
+};

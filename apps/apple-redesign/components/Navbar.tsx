@@ -5,10 +5,11 @@ import { MagnifyingGlassIcon, ShoppingBagIcon, UserIcon } from '@heroicons/react
 import { useSelector } from 'react-redux';
 import { addToCart, selectCartItems } from '../redux/cartSlice';
 import { Cart } from './Cart';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 export const Navbar = () => {
-  const session = false;
   const items = useSelector(selectCartItems);
+  const { data: session } = useSession();
   return <header className="sticky z-50 top-0 flex w-full items-center justify-between bg-[#E7ECEE] p-4">
     <div className="flex items-center justify-center cursor-pointer md:w-1/5">
       <Link href="/">
@@ -35,14 +36,15 @@ export const Navbar = () => {
       </div>
       {
         session ? (
-          <Image src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"
+          <Image src={ session.user?.image || 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y'}
             alt=""
             className="cursor-pointer rounded-full"
             width={34}
             height={34}
+            onClick={() => signOut()}
           />
         ) : (
-          <UserIcon className="headerIcon" />
+          <UserIcon className="headerIcon" onClick={() => signIn()}/>
         )
       }
     </div>

@@ -2,12 +2,12 @@
 module.exports = {
   reactStrictMode: true,
   transpilePackages: [
-    "@portfolio/button"
+    '@portfolio/button',
   ],
   images: {
     domains: [
-      "rb.gy", "cdn.sanity.io", "lh3.googleusercontent.com", "www.gravatar.com"
-    ]
-  }
-}
+      'rb.gy', 'cdn.sanity.io', 'lh3.googleusercontent.com', 'www.gravatar.com',
+    ],
+  },
+};
 
