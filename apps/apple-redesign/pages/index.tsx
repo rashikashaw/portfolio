@@ -28,9 +28,9 @@ const Home: NextPage = ({ categories, products }: Props) => {
       </Head>
       <Navbar />
       <main className="relative h-[200vh] bg-[#E7ECEE]">
-        <Landing />
+        <Landing href="#products" />
       </main>
-      <section className="relative z-40 -mt-[100vh] min-h-screen bg-[#1B1B1B]">
+      <section id="products" className="relative z-40 -mt-[100vh] min-h-screen bg-[#1B1B1B]">
         <div className="justify-center items-center space-y-10 py-16">
           <h1 className="text-center text-4xl font-medium tracking-wide text-white md:text-5xl">
             New Promo

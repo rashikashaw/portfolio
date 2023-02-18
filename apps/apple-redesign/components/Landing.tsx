@@ -2,8 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import { Button } from './Button';
 import { motion } from 'framer-motion';
+import { AnchorLink } from './AnchorLink';
 
-export const Landing = () => {
+type Landingprops = {
+  href: string;
+};
+
+export const Landing = ({ href }: Landingprops) => {
   return (
     <section className="sticky top-0 mx-auto flex h-screen max-w-[1350px] items-center justify-between px-8">
       <motion.div
@@ -23,7 +28,7 @@ export const Landing = () => {
             <span className="block">Driven By Values</span>
           </h1>
           <div className="space-x-8">
-            <Button label="Buy Now" onClick={() => {}} />
+            <AnchorLink label="Buy Now" href={href} />
             <a className="link">Learn More</a>
           </div>
         </div>
