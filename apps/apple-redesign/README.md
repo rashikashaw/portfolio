@@ -4,7 +4,7 @@ An apple store website developed using Next.js, Tailwind CSS, Sanity, Stripe and
 
   [`Deployed website link`]()
 
-  [`Source Code`](https://github.com/rashikashaw/portfolio/tree/apple-redesign/apps/apple-redesign)
+  [`Source Code`](https://github.com/rashikashaw/portfolio/tree/main/apps/apple-redesign)
 
 ## How to intall packages, build and run?
 To install

@@ -16,7 +16,7 @@ Click the below links to open the deployed apps.
 
   [`Deployed website link`]()
 
-  [`Source Code`](https://github.com/rashikashaw/portfolio/tree/apple-redesign/apps/apple-redesign)
+  [`Source Code`](https://github.com/rashikashaw/portfolio/tree/apps/apple-redesign)
 - `component-stories`: Storybook for shared components, hooks, design system and helper utilites. Hosted using Netlify.
 
   [`Deployed website link`](https://portfolio-storybook.netlify.app)
