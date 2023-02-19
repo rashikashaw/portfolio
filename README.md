@@ -7,9 +7,15 @@ Apps are located in `apps/` directory and packages are located in `packages/` di
 Click the below links to open the deployed apps.
 ### Apps and Packages
 
-- [`evo-gym`](https://template-fitness-center.netlify.app/): A simple fitness center website developed using React and Tailwind and deployed using Netlify.
-- `self-made`: Under contruction e-commerce web sites for creative home crafts using React and Redux with APIs using Firebase.
-- [`component-stories`](https://portfolio-storybook.netlify.app): Storybook for shared components, hooks, design system and helper utilites. Hosted using Netlify.
+- [`evo-gym`]: A simple fitness center website developed using React and Tailwind CSS and deployed using Netlify.
+  [`evo-gym netlify deployed link`](https://portfolio-storybook.netlify.app)
+  [`source code`](https://github.com/rashikashaw/portfolio/tree/apple-redesign/apps/evo-gym)
+- [`apple-redesign`]: An apple store website developed using Next.js, Tailwind CSS, Sanity, Stripe and deployed using Netlify.
+  [`apple-redesign netlify deployed link`]()
+  [`source code`](https://github.com/rashikashaw/portfolio/tree/apple-redesign/apps/apple-redesign)
+- [`component-stories`]: Storybook for shared components, hooks, design system and helper utilites. Hosted using Netlify.
+  [`component storybook netlify delpoyed link`](https://portfolio-storybook.netlify.app)
+  [`source code`](https://github.com/rashikashaw/portfolio/tree/apple-redesign/apps/component-stories)
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 

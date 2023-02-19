@@ -58,12 +58,5 @@ export const user = defineType({
       }],
       hidden: true,
     }),
-    defineField({
-      title: 'Cart',
-      name: 'cart',
-      type: 'reference',
-      to: [{ type: 'cart' }],
-      weak: true,
-    }),
   ],
 });
