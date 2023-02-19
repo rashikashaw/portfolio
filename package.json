@@ -2,25 +2,21 @@
   "name": "portfolio",
   "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*",
-    "packages/components/*"
-  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write 'src/**/*.*(js|cjs|html|css|ts|tsx)'"
+    "format": "prettier --write '**/src/**/*.*(js|cjs|html|css|ts|tsx)'"
   },
   "devDependencies": {
-    "@portfolio/eslint-config-custom": "*",
+    "@portfolio/eslint-config-custom": "workspace:*",
+    "eslint": "^8.34.0",
     "prettier": "latest",
+    "prettier-plugin-tailwindcss": "^0.2.2",
     "turbo": "latest"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   },
-  "dependencies": {},
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "pnpm@7.27.0"
 }

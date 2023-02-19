@@ -1,4 +1,4 @@
-export const font  = {
+export const font = {
   header: {
     header1: {
       fontWeight: 600,
@@ -13,7 +13,7 @@ export const font  = {
     header3: {
       fontWeight: 600,
       fontSize: 22,
-      lineHeight: 33, 
+      lineHeight: 33,
     },
     header4: {
       fontWeight: 600,
@@ -28,8 +28,8 @@ export const font  = {
     header6: {
       fontWeight: 600,
       fontSize: 12,
-      lineHeight: 18
-    }
+      lineHeight: 18,
+    },
   },
   button: {
     buttonSmall: {
@@ -45,9 +45,9 @@ export const font  = {
     buttonLarge: {
       fontWeight: 600,
       fontSize: 17,
-      lineHeight: 22
-    }
-  }
+      lineHeight: 22,
+    },
+  },
 };
 
 export const sizes = {
@@ -75,7 +75,7 @@ export const sizes = {
     width: 170,
     height: 56,
   },
-}
+};
 
 export const spacing = {
   half: 4,

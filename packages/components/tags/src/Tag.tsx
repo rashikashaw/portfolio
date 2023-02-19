@@ -1,30 +1,26 @@
-import React, { useState } from "react";
-import styled from "@emotion/styled";
-import { GrFormClose } from "react-icons/gr";
-import { TextOverFlow } from "@portfolio/text-overflow";
+import styled from '@emotion/styled';
+import { GrFormClose } from 'react-icons/gr';
+import { TextOverFlow } from '@portfolio/text-overflow';
 
 const TagWrapper = styled.div`
   height: 20px;
   width: 100px;
   display: flex;
   flex-direction: column;
-  border: 1px solid  rgb(0, 0, 0, 0.4);
+  border: 1px solid rgb(0, 0, 0, 0.4);
   border-radius: 8px;
   justify-content: center;
   align-items: flex-start;
   background-color: rgb(0, 0, 0, 0.04);
-  position:relative;
+  position: relative;
   padding: 6px;
   margin-right: 4px;
   margin-left: 4px;
   &:hover {
-    border-color: #1677FF;
-    color: #1677FF;
+    border-color: #1677ff;
+    color: #1677ff;
   }
 `;
-
-  
-
 
 const StyledTextOverFlow = styled(TextOverFlow)`
   height: 0px;
@@ -38,12 +34,12 @@ const IconWrapper = styled.div`
     width: 20px;
   }
   cursor: pointer;
-  right: 6px; 
-  position: absolute;  
+  right: 6px;
+  position: absolute;
   display: flex;
   align-items: center;
   top: 50%;
-  box-sizing:border-box;
+  box-sizing: border-box;
   transform: translateY(-50%);
 `;
 
@@ -57,9 +53,9 @@ export const Tag = (props: TagProp) => {
   return (
     <TagWrapper>
       <StyledTextOverFlow text={tag} length={7} />
-        <IconWrapper onClick={onTagDelete}>
-          <GrFormClose />
-        </IconWrapper>    
+      <IconWrapper onClick={onTagDelete}>
+        <GrFormClose />
+      </IconWrapper>
     </TagWrapper>
   );
 };

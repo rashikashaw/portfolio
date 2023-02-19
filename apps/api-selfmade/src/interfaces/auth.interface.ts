@@ -1,15 +1,15 @@
 import { Request } from 'express';
 import { User } from '@prisma/client';
 
-export interface DataStoredInToken {
+export type DataStoredInToken = {
   id: number;
-}
+};
 
-export interface TokenData {
+export type TokenData = {
   token: string;
   expiresIn: number;
-}
+};
 
-export interface RequestWithUser extends Request {
+export type RequestWithUser = {
   user: User;
-}
+} & Request;

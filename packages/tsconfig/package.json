@@ -10,5 +10,8 @@
     "nextjs.json",
     "react-library.json",
     "api-server.json"
-  ]
+  ],
+  "devDependencies": {
+    "eslint-plugin-turbo": "^0.0.7"
+  }
 }

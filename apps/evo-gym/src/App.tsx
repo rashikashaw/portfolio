@@ -8,9 +8,7 @@ import { ContactUs } from './components/contactUs';
 import { Footer } from './components/footer';
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
-    SelectedPage.Home,
-  );
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   useEffect(() => {
     const handleScroll = () => {

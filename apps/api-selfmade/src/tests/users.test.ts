@@ -6,7 +6,7 @@ import { CreateUserDto } from '@dtos/users.dto';
 import UserRoute from '@routes/users.route';
 
 afterAll(async () => {
-  await new Promise<void>(resolve => setTimeout(() => resolve(), 500));
+  await new Promise<void>((resolve) => setTimeout(() => resolve(), 500));
 });
 
 describe('Testing Users', () => {
@@ -101,7 +101,10 @@ describe('Testing Users', () => {
       });
 
       const app = new App([usersRoute]);
-      return request(app.getServer()).put(`${usersRoute.path}/${userId}`).send(userData).expect(200);
+      return request(app.getServer())
+        .put(`${usersRoute.path}/${userId}`)
+        .send(userData)
+        .expect(200);
     });
   });
 

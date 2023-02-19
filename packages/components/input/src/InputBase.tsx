@@ -1,12 +1,11 @@
-import styled from "@emotion/styled";
-import { ColorPalette } from "@portfolio/css-util";
-import React from "react";
-
+import React from 'react';
+import styled from '@emotion/styled';
+import { ColorPalette } from '@portfolio/css-util';
 
 export const Wrapper = styled.div`
   height: 80px;
   width: 300px;
-  position:relative;
+  position: relative;
   display: flex;
   align-items: center;
 `;
@@ -32,14 +31,12 @@ export const Icon = styled.div`
     height: 20px;
     width: 20px;
   }
-  position: absolute;  
+  position: absolute;
   display: flex;
   align-items: center;
   top: 50%;
-  box-sizing:border-box;
-  transform: translateY(-50%); 
+  box-sizing: border-box;
+  transform: translateY(-50%);
 `;
 
 export type InputBaseProps = React.InputHTMLAttributes<HTMLInputElement>;
-
- 

@@ -5,7 +5,5 @@ type Props = {
 };
 
 export const HText = ({ children }: Props) => {
-  return (
-    <h1 className="basis-3/5 font-montserrat text-3xl font-bold">{children}</h1>
-  );
+  return <h1 className="font-montserrat basis-3/5 text-3xl font-bold">{children}</h1>;
 };
