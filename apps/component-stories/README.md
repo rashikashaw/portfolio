@@ -1,7 +1,7 @@
 # Component-Storybook
 Components storybook which showcase commom packages. This website is build using React and Styled-Component.
 
-  [`Deployed website link`](https://component-storybook.vercel.app)
+  [`Deployed website link`](https://portfolio-component-stories.vercel.app)
 
   [`Source Code`](https://github.com/rashikashaw/portfolio/tree/main/apps/component-stories)
 
