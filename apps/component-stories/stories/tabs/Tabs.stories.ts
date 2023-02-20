@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/react';
-import { Tabs } from '@portfolio/tabs';
+import { Tabs } from 'tabs';
 const meta: Meta = {
   title: 'Tabs',
   component: Tabs,

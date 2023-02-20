@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExpandableBlock } from '@portfolio/expandable-block';
+import { ExpandableBlock } from 'expandable-block';
 import { useState } from '@storybook/addons';
 import { GoChevronRight, GoChevronDown } from 'react-icons/go';
 import styled from '@emotion/styled';

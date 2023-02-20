@@ -1,5 +1,5 @@
 {
-  "extends": "@portfolio/tsconfig/api-server.json",
+  "extends": "tsconfig/api-server.json",
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "src",

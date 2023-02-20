@@ -1,4 +1,4 @@
 {
-  "extends": "@portfolio/tsconfig/react.json",
+  "extends": "tsconfig/react.json",
   "include": ["stories"]
 }

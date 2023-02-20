@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/apple-redesign",
+  "name": "apple-redesign",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -11,7 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.10",
     "@heroicons/react": "^2.0.15",
-    "@portfolio/button": "workspace:*",
+    "button": "workspace:*",
     "@reduxjs/toolkit": "^1.9.2",
     "@stripe/stripe-js": "^1.46.0",
     "framer-motion": "^9.0.2",
@@ -30,8 +30,8 @@
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "@portfolio/eslint-config-custom": "workspace:*",
-    "@portfolio/tsconfig": "workspace:*",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
     "@types/node": "18.11.3",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",

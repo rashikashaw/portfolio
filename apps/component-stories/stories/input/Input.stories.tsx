@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/react';
-import { Input } from '@portfolio/input';
+import { Input } from 'input';
 const meta: Meta = {
   title: 'Input',
   component: Input,

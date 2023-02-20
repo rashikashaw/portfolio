@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { ColorPalette } from '@portfolio/css-util';
+import { ColorPalette } from 'css-util';
 
 const Wrapper = styled.div`
   align-items: flex-start;

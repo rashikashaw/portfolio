@@ -1,6 +1,6 @@
 import LoremIpsum from 'react-lorem-ipsum';
 import React from 'react';
-import { Tabs } from '@portfolio/tabs';
+import { Tabs } from 'tabs';
 import { action } from '@storybook/addon-actions';
 
 const Body1 = () => <LoremIpsum p={2} />;

@@ -1,9 +1,9 @@
 /* eslint-disable no-magic-numbers */
 import React, { useState } from 'react';
-import { Input } from '@portfolio/input';
+import { Input } from 'input';
 import styled from '@emotion/styled';
 import { BiEnvelope, BiSearchAlt } from 'react-icons/bi';
-import { ColorPalette } from '@portfolio/css-util';
+import { ColorPalette } from 'css-util';
 
 const Wrapper = styled.div`
   height: 150px;

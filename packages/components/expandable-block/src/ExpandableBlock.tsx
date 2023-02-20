@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React, { useEffect, useState } from 'react';
-import { ColorPalette } from '@portfolio/css-util';
+import { ColorPalette } from 'css-util';
 
 const Wrapper = styled.div`
   display: flex;
