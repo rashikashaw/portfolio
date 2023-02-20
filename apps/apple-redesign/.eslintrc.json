@@ -1,9 +1,4 @@
 {
   "root": true,
-  "extends": ["next", "eslint-config-custom"],
-  "parserOptions": {
-    "babelOptions": {
-      "presets": ["next/babel"]
-    }
-  }
+  "extends": ["eslint-config-custom"]
 }
