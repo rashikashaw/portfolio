@@ -4,7 +4,7 @@ A fitness website template for users to showcase informations like benefits, cla
 
 Developed using `React` and `Tailwind CSS` and deployed using Netlify.
 
-  [`Deployed website link`](https://portfolio-storybook.netlify.app)
+  [`Deployed website link`](https://evo-gym.vercel.app)
 
   [`Source Code`](https://github.com/rashikashaw/portfolio/tree/apple-redesign/apps/evo-gym)
 

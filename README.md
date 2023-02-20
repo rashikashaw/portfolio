@@ -9,17 +9,17 @@ Click the below links to open the deployed apps.
 
 - `evo-gym`: A simple fitness center website developed using React and Tailwind CSS and deployed using Netlify.
 
-  [`Deployed website link`](https://template-fitness-center.netlify.app)
+  [`Deployed website link`](https://evo-gym.vercel.app)
 
   [`Source Code`](https://github.com/rashikashaw/portfolio/tree/main/apps/evo-gym)
 - `apple-redesign`: An apple store website developed using Next.js, Tailwind CSS, Sanity, Stripe and deployed using Netlify.
 
-  [`Deployed website link`]()
+  [`Deployed website link`](https://portfolio-apple-redesign.vercel.app)
 
   [`Source Code`](https://github.com/rashikashaw/portfolio/tree/apps/apple-redesign)
 - `component-stories`: Storybook for shared components, hooks, design system and helper utilites. Hosted using Netlify.
 
-  [`Deployed website link`](https://portfolio-storybook.netlify.app)
+  [`Deployed website link`](component-storybook.vercel.app)
 
   [`Source Code`](https://github.com/rashikashaw/portfolio/tree/main/apps/component-stories)
 
