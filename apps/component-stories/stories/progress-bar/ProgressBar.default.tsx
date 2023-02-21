@@ -61,38 +61,38 @@ export const Default = () => {
 
   const increase = () => {
     if (currentStep === items.length) {
-      return setCurrentStep(items.length)
+      return setCurrentStep(items.length);
     }
-    setCurrentStep(currentStep + 1)
-  }
+    setCurrentStep(currentStep + 1);
+  };
   const decrease = () => {
     if (currentStep <= 1) {
-      return setCurrentStep(1)
+      return setCurrentStep(1);
     }
-    setCurrentStep(currentStep - 1)
-  }
+    setCurrentStep(currentStep - 1);
+  };
 
   const [currentStep1, setCurrentStep1] = useState(1);
   const totalSteps = 6;
   const increase1 = () => {
     if (currentStep1 === totalSteps) {
-      return setCurrentStep1(items.length)
+      return setCurrentStep1(items.length);
     }
-    setCurrentStep1(currentStep1 + 1)
-  }
+    setCurrentStep1(currentStep1 + 1);
+  };
   const decrease1 = () => {
     if (currentStep1 <= 1) {
-      return setCurrentStep1(1)
+      return setCurrentStep1(1);
     }
-    setCurrentStep1(currentStep1 - 1)
-  }
+    setCurrentStep1(currentStep1 - 1);
+  };
   return (
     <Wrapper>
       <ProgressBarWrapper>
         <BarWrapper>
           <ItemsWrapper>
             {items.map((item, i) => (
-              <ItemWrapper onClick={() => setCurrentStep(i+1)}>
+              <ItemWrapper onClick={() => setCurrentStep(i + 1)}>
                 {item}
               </ItemWrapper>
             ))}
@@ -100,8 +100,8 @@ export const Default = () => {
           <ProgressBar currentStep={currentStep} totalSteps={6} />
         </BarWrapper>
         <ButtonWrapper>
-          <Button onClick={decrease} label='Previous' />
-          <Button onClick={increase} label='Next' />
+          <Button onClick={decrease} label="Previous" />
+          <Button onClick={increase} label="Next" />
         </ButtonWrapper>
       </ProgressBarWrapper>
       <ProgressBarWrapper>
@@ -109,8 +109,8 @@ export const Default = () => {
           <ProgressBar currentStep={currentStep1} totalSteps={totalSteps} />
         </BarWrapper>
         <ButtonWrapper>
-          <Button onClick={decrease1} label='Previous' />
-          <Button onClick={increase1} label='Next' />
+          <Button onClick={decrease1} label="Previous" />
+          <Button onClick={increase1} label="Next" />
         </ButtonWrapper>
       </ProgressBarWrapper>
     </Wrapper>
