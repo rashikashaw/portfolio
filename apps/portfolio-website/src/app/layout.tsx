@@ -1,6 +1,6 @@
 'use client';
 import './globals.css';
-import { Navbar } from '@/components/Navbar';
+import { Navbar } from '../components/Navbar';
 import { Shadows_Into_Light, Roboto } from '@next/font/google';
 import { ThemeProvider } from 'next-themes';
 
@@ -27,7 +27,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <body className="px-[100px]">
         <ThemeProvider enableSystem={true} attribute="class">
           <Navbar />
           {children}

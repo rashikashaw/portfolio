@@ -27,6 +27,16 @@ module.exports = {
         otherText: 'rgb(72,72,77)',
         seaGreen: 'rgb(20,184,166)',
       },
+      padding: {
+        '100px': '100px',
+      },
+      dropShadow: {
+        '3xl': '1em 1em 1em rgba(16, 26, 28)',
+        '4xl': '.25em .25em 1em rgba(108, 111, 112)',
+      },
+      height: {
+        '128': '560px',
+      }
     },
   },
   plugins: [],

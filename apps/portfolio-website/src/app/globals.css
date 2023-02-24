@@ -5,3 +5,34 @@
 .dark {
   @apply bg-gray-800 text-zinc-50;
 }
+
+#image {
+  background-image: url('/blob3.png');
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-position:70% 0%;
+}
+
+@media(max-width: 1030px) {
+  #image {
+    background-image: url('/blob3.png');
+    background-size: 500px;
+    background-position:70% 0%;
+  }
+}
+
+@media(max-width: 768px) {
+  #image {
+    background-image: url('/blob3.png');
+    background-size: 400px;
+    background-position:70% 0%;
+  }
+}
+
+@media(max-width: 442px) {
+  #image {
+    background-image: url('/blob3.png');
+    background-size:100px;
+    background-position:100% 150%;
+  }
+}
