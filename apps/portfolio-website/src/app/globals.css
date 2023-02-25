@@ -10,16 +10,9 @@
   background-image: url('/blob3.png');
   background-repeat: no-repeat;
   background-size: 600px;
-  background-position:70% 0%;
+  background-position:70% -10%;
 }
 
-@media(max-width: 1030px) {
-  #image {
-    background-image: url('/blob3.png');
-    background-size: 500px;
-    background-position:70% 0%;
-  }
-}
 
 @media(max-width: 768px) {
   #image {
@@ -29,10 +22,34 @@
   }
 }
 
-@media(max-width: 442px) {
-  #image {
-    background-image: url('/blob3.png');
-    background-size:100px;
-    background-position:100% 150%;
-  }
+
+
+.curve {
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom:0;
+}
+
+.curve::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #202731;
+  transform: translate(85%, 60%);
+}
+
+.curve::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #3c31dd;
+  transform: translate(-4%, 40%);
+  z-index: -1;
 }
