@@ -14,7 +14,7 @@ export const ProjectCard = (props: ProjectcardType) => {
   const { image, headline, summary, tags, width, link, githubLink } = props;
   return (
     // card
-    <div className={`flex flex-col rounded-2xl justify-between items-between bg-gradient-to-r from-cyan-700 to-blue-900 shadow-lg shadow-blue-500/50 ${width} p-2 cursor-pointer`}>
+    <div className={`flex flex-col rounded-2xl justify-between items-between bg-gradient-to-r from-cyan-700 to-blue-900 shadow-lg shadow-blue-500/50 ${width} p-2 cursor-pointer transition duration-700  hover:scale-x-125 hover:scale-y-125 hover:z-10`}>
       {/* image */}
       <div className="p-2 w-full">
         <img src={image} alt="" className="rounded-lg"/>
