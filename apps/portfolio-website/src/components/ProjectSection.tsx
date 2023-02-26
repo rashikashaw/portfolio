@@ -7,6 +7,7 @@ const projects = [
     summary: 'A simple fitness center static website deployed using Vercel.',
     tags: ['react', 'typescript', 'tailwind CSS', 'node', 'figma'],
     link: 'https://evo-gym.vercel.app/',
+    githubLink: 'https://github.com/rashikashaw/portfolio/tree/main/apps/evo-gym',
   },
   {
     headline: "Apple Redesign",
@@ -14,6 +15,7 @@ const projects = [
     summary: 'An apple store website redesigned and deployed using Vercel.',
     tags: ['next,js', 'typescript', 'tailwind CSS', 'node', 'figma', 'headless CMS', 'redux', 'stripe'],
     link: 'https://portfolio-apple-redesign.vercel.app/',
+    githubLink: 'https://github.com/rashikashaw/portfolio/tree/main/apps/apple-redesign',
   },
   {
     headline: "Component Storybook",
@@ -21,6 +23,7 @@ const projects = [
     summary: 'Storybook for shared components, hooks, design system and helper utilites. Hosted using Vercel',
     tags: ['react', 'typescript', 'node'],
     link: 'https://portfolio-component-stories.vercel.app',
+    githubLink: 'https://github.com/rashikashaw/portfolio/tree/main/apps/component-stories',
   },
 ]
 
@@ -38,6 +41,7 @@ export const ProjectSection = () => {
             tags={project.tags}
             link={project.link}
             width={'w-96'}
+            githubLink={project.githubLink}
           />
         ))}
       </div>
