@@ -15,7 +15,7 @@ export const HeroSection = () => {
         </p>
         <div className="max-w-sm flex flex-col justify-center items-center space-y-6 lg:block">
           <button className="p-3 px-6 lg:mr-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-md baseline border-black hover:opacity-100">Download CV</button>
-          <button className="p-3 px-6 bg-white rounded-md baseline border-2 dark:bg-slate-800">Contact me</button>
+          <button className="p-3 px-6 bg-white rounded-md baseline border-2 dark:bg-slate-800">Hire me?</button>
         </div>
       </div>
       <div id="image" className="flex md:w-1/2 justify-center items-center">
