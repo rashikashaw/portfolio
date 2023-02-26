@@ -26,7 +26,7 @@ export const ProjectCard = (props: ProjectcardType) => {
           <h2>{headline}</h2>
         </div>
         {/* summary */}
-        <div className="text-lg text-white items-start p-3">
+        <div className="text-lg text-zinc-300 items-start p-3">
           <p>
             {summary}
           </p>
@@ -45,7 +45,7 @@ export const ProjectCard = (props: ProjectcardType) => {
           view
         </a>
         <a href={githubLink} target="_blank" >
-          <SiGithub size={25} />
+          <SiGithub size={25} color='white' />
         </a>
       </div>
     </div>
