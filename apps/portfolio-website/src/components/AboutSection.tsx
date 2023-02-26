@@ -1,6 +1,6 @@
 import { Tags } from "./Tags";
 export const AboutSection = () => {
-  const skills = ['Next.js', 'React', 'Typescript', 'Tailwind',' Nodejs', 'Express', 'REST API', 'MySql', 'MongoDB', 'Git', 'Jest', 'Figma'];
+  const skills = ['Next.js', 'React', 'Typescript', 'Redux', 'Tailwind',' Nodejs', 'Express', 'REST API', 'MySql', 'MongoDB', 'Git', 'Jest'];
   return (
     <section className="relative flex flex-col items-center min-h-full">
       <div className="container flex flex-col-reverse mb-36  lg:mt-48 space-y-12 lg:space-y-0 lg:flex-row">
@@ -103,7 +103,7 @@ export const AboutSection = () => {
           </div>
           <div className="grid gap-x-8 ml-6 gap-y-4 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
             {skills.map((skill,i) => (
-              <Tags skill={skill} key={i}/>
+              <Tags value={skill} key={i}/>
             ))}
           </div>
         </div>

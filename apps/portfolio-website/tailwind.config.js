@@ -37,6 +37,9 @@ module.exports = {
       },
       height: {
         '128': '560px',
+      },
+      weight: {
+        '128': '560px',
       }
     },
   },

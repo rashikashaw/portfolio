@@ -27,7 +27,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="px-[100px]">
+      <body className="px-12 lg:px-[100px]">
         <ThemeProvider enableSystem={true} attribute="class">
           <Navbar />
           {children}
