@@ -21,13 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${shadows_into_light.variable} ${roboto.variable}`}>
+    <html lang="en" className={`${shadows_into_light.variable} ${roboto.variable} `}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="px-12 lg:px-[100px]">
+      <body>
         <ThemeProvider enableSystem={true} attribute="class">
           <Navbar />
           {children}

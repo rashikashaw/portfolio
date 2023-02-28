@@ -2,7 +2,7 @@ import { Tags } from "./Tags";
 export const AboutSection = () => {
   const skills = ['Next.js', 'React', 'Typescript', 'Redux', 'Tailwind',' Nodejs', 'Express', 'REST API', 'MySql', 'MongoDB', 'Git', 'Jest'];
   return (
-    <section className="relative flex flex-col items-center min-h-full">
+    <section id="about" className="relative flex flex-col items-center min-h-full">
       <div className="container flex flex-col-reverse mb-36  lg:mt-48 space-y-12 lg:space-y-0 lg:flex-row">
         {/* experince section */}
         <div className="flex flex-col items-center mt-20 lg:mt-0 space-y-8 lg:w-1/2">

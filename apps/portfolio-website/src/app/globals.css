@@ -52,3 +52,38 @@
   transform: translate(-4%, 40%);
   z-index: -1;
 }
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  width: 24px;
+  transition: all 0.25s;
+  position:relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: black;
+}
+
+.hamburger-middle{
+  transform: translateY(7px);
+}
+
+.hamburger-bottom{
+  transform: translateY(14px);
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

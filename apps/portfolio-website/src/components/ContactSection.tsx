@@ -82,7 +82,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contactMe"className="relative flex flex-col items-center justify-center min-h-full">
+    <section id="contact"className="relative flex flex-col items-center justify-center min-h-full">
       <div className="flex flex-col items-center mt-36 justify-center">
         <h2 className="max-w-md text-4xl font-bold items-center justify-center lg:text-left">Contact</h2>
         <div className="container flex flex-col mb-36 mt-16 justify-center items-center space-y-12 lg:space-y-0 lg:flex-row">
