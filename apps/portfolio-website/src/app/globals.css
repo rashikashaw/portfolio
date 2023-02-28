@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .dark {
-  @apply bg-gray-800 text-zinc-50;
+  @apply bg-gray-800 text-zinc-100;
 }
 
 #image {
@@ -21,7 +21,6 @@
     background-position:70% 0%;
   }
 }
-
 
 
 .curve {

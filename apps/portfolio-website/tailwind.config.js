@@ -27,6 +27,7 @@ module.exports = {
         headerLight: 'rgb(39,39,42)',
         otherText: 'rgb(72,72,77)',
         seaGreen: 'rgb(20,184,166)',
+        transparent: 'transparent',
       },
       padding: {
         '100px': '100px',
