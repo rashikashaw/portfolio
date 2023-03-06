@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/rashikashaw/wd/portfolio/apps/api-selfmade/src/utils/debug/.871866dcaab1a550fe7ef37de653286e1512fd1b-audit.json",
+    "files": [
+        {
+            "date": 1678067060344,
+            "name": "/Users/rashikashaw/wd/portfolio/apps/api-selfmade/src/utils/debug/2023-03-05.log",
+            "hash": "3e526b0c5fc8ebc8a10b2c922a62f5e930b343e2612a0cb9b186ec9b4850226d"
+        }
+    ],
+    "hashType": "sha256"
+}
